@@ -1,0 +1,1246 @@
+$RLBlue1 : #009dd9; /* #2980b9; */
+$RLBlue2 : #33B1E1; /* #3498db; */
+$RLBlue3 : #31BBF0;
+$RLBlue4 : #D8EFF5;
+$RLBlue5 : #EEF8FA;
+$RLNavBar         : $RLBlue2;
+$RLNavBarSelected : $RLBlue1;
+$RLNavBarHover    : $RLBlue3;
+
+$RLNavBarSub      : $RLBlue3;
+$RLNavBarSubHover : $RLBlue2;
+$RLNavBarSubSelected : $RLBlue1;
+
+$RLBotBorder : $RLBlue2 1px solid;
+
+$FontTitle: 'Ubuntu', sans-serif;
+$FontBody:  'Open Sans', sans-serif;
+$Transition: all 0.4s ease 0s;
+$TransitionNav: opacity 0.7s ease 0.1s;
+$TransitionVid: opacity 0.3s ease-in-out;
+
+@import "compass";
+@import "compass/css3/pie";
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Lato:300,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+@mixin auto-numbers($numbered-element, $sep, $counter: item, $nested-parent: false ){
+    $sel: ();
+    @if $nested-parent {
+        $sel: append($sel, unquote($nested-parent));
+
+        #{$nested-parent}{
+            list-style: none;
+            margin-left: 0;
+        }
+    }
+    $sel: append($sel, unquote('&'), comma);
+
+    #{$sel}{
+        counter-reset: #{$counter};
+        > #{$numbered-element}{
+            &:before{
+                counter-increment: #{$counter};
+                content: if($nested-parent, counters(#{$counter}, "#{$sep} ") "#{$sep} ", counter(#{$counter}) "#{$sep} ") ;
+            }
+        }
+    }
+}
+
+.paginate {
+	font-size: 11px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	.current { font-weight: 700; }
+	span, a { margin-left: 5px; }
+	&.videos {margin-bottom: 15px;margin-top: 5px;}
+}
+
+html, html a { -webkit-font-smoothing: antialiased; }
+img.skype_pnh_logo_img { display: none !important; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $FontTitle; }
+blockquote { border-left: 5px solid $RLBlue3; background: $RLBlue5;}
+a {
+	&.twitter:before,
+	&.email:before,
+	&.tel:before,
+	&.lync:before {
+		font-family: FontAwesome;
+		margin-right: 0.2em;
+	}
+	&.twitter:before{ content: "\f099"; }
+	&.email:before { content: "\f0e0"; }
+	&.tel:before { content: "\f095"; }
+	&.lync:before { content: "\f0c0";}
+}
+
+legend {
+	border-bottom: $RLBotBorder;
+}
+.WhBorder { 
+	border-left: solid 1px #fff;
+	border-left: solid 1px rgba(255, 255, 255, 0.3);
+	 }
+
+.tags{
+	margin-top: 5px;
+	a {
+		font-size: 10px;
+		background-color: $RLBlue3;
+		color: #fff;
+		padding-right: 6px;
+		padding-left: 6px;
+		margin-right: 3px;
+		padding-bottom: 2px;
+		padding-top: 0px;
+		white-space: nowrap;
+	    @include transition($Transition);
+		&:hover {background: $RLBlue1;}
+		@include border-radius(3px);
+    behavior: url(PIE.htc);
+	}
+	&:before {
+		font-family: FontAwesome;
+		content: "\f02c ";
+		margin-right: 0.5em;
+			@include opacity(0.6);
+	}
+}
+
+
+a:hover { text-decoration: none; }
+body {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	font-family: $FontBody;
+}
+
+#RLHead {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 30px;
+	background: $RLBlue1;
+	color: #fff;
+	position: relative;
+	.logo { margin-bottom: 40px; }
+	#Contacts a {
+		white-space: nowrap;
+		font-size: 18px;
+		color: #fff;
+		@include opacity(0.5);
+		text-decoration: none;
+		padding-left: 15px;
+		@include transition($Transition);
+		&:hover {
+			@include opacity(1);
+		}
+	}
+	div:not(:first-child) { text-align: right; }
+	#Strap {
+		font-family: $FontTitle;
+		font-size: 38px;
+		font-weight:300;
+		> span {
+			font-weight:700;
+		}
+	}
+
+	#search {
+		position: absolute;
+		bottom: 15px;
+		right: 0;
+	}
+	#search form { margin-bottom: 0; }
+}
+
+#RLNav {
+	position: relative;
+	margin-left: 0;margin-right: 0;
+	font-size: 16px;
+	background-color: $RLNavBar;
+	color:#fff;
+	font-family: $FontTitle;
+	z-index: 1 !important;
+	.selected { background-color: $RLNavBarSelected; }
+
+	ul#NavBar { 
+   	 	display: table;
+ 	 	width: 100%;
+ 	 	margin-bottom: 0;
+ 	 	padding-left: 0;
+
+		 > li > a:after { 
+	  		font-family: FontAwesome; content: '\F0D7'; padding-left:10px;}
+		 > li > ul > li > a:after { 
+	  		font-family: FontAwesome; content: '\F0DA'; padding-left:10px; /*caret down*/}
+		 li > a:only-child:after { 
+	  		font-family: FontAwesome; content: '';  padding-left:0;}
+
+		> li:hover > ul {
+			@include opacity(1);
+    		top: 40px;
+		}
+		>li {
+			cursor: pointer;
+			white-space: nowrap;
+			> a { text-align: center; }
+			&:first-child a {
+				padding-right: 5px;
+				padding-left: 0;
+			}
+			&:last-child a {
+				padding-right: 0;
+				padding-left: 5;
+			}
+			&:hover {
+				background-color:$RLNavBarHover;
+				@include transition($Transition);
+			}
+		}
+		> li:hover > ul {
+			@include opacity(1);
+			top: 40px;
+		}
+		li {
+    		position: relative;
+			list-style-type: none;
+			padding:0;
+    		display: table-cell;	
+			a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+	    		display: block;
+				color:#fff;
+	    		text-decoration: none;
+			    padding-right: 5px;
+			    padding-left: 5px;
+			}
+			ul {
+				display: block;
+				z-index: 100;
+				padding-left: 0;
+			    position: absolute;
+			    left: 0;
+			    top: -99999px;
+			    @include opacity(1);
+				background: $RLNavBarSub;
+				@include border-radius(0 0 5px 5px);
+   				behavior: url(PIE.htc);
+				@include transition($TransitionNav);
+				li:hover ul { overflow: auto;top: 0; left: 100%;}
+			}
+ 			ul li {
+ 				display: block;
+			    padding: 0;
+			    text-align: left;
+			    padding-left: 15px;
+			    white-space: nowrap;
+			    padding-right: 15px;
+			    @include transition($TransitionNav);
+			    &:last-child{
+					@include border-radius(0 0 5px 5px);
+				}
+				&:hover { background-color:$RLNavBarSubHover; }
+				&:hover:last-child{
+					background-color:$RLNavBarSubHover;
+				}
+				&.selected {background-color: $RLNavBarSubSelected;}
+			}
+			ul li:last-child a { border: none; }
+		}
+	}
+}
+
+
+#RLMain {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 0 !important;
+}
+
+#RLBody {
+	border-right: solid $RLBlue2 1px;
+	&.fullwidth { border-right:0; }
+}
+
+#RLFoot {
+	.em {font-weight: 600; }
+	font-weight: 600;
+	margin-left: 0;
+	margin-right: 0;
+	background: $RLBlue2;
+	color: #fff;
+	padding-top: 20px;
+	font-size: 11px;
+	position: relative;
+	padding-bottom: 25px;
+	a {
+		border-bottom: $RLBotBorder;
+	}
+	a:hover { 
+		border-bottom: solid 1px #fff;
+		border-bottom: solid 1px rgba(255,255,255,0.3);
+	}
+	#copy {
+		text-align: center;
+		color: #fff;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		font-size: 10px;
+		@include opacity(0.75);
+		a {
+			color:#fff;
+			font-weight: 700;
+		}
+	}
+	ul {
+		padding:0;
+		margin-bottom: 5px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    list-style-type: none;
+		li {
+			font-weight: 300;
+			text-align: left;
+			padding-top: 5px;
+		    white-space: nowrap;
+		padding-bottom: 2px;
+			ul {padding-left:10px;}
+		}
+		a {
+		padding-bottom: 1px;
+		    display: block;
+			color:#fff;
+		}
+	}
+}
+
+#RLSearchInput {
+    background: url(/media/search-white.png) no-repeat 10px 8px $RLBlue2;
+    border: 0 none;
+    font: bold 12px;
+    color: #fff;
+    width: 170px;
+    padding: 6px 15px 6px 35px;
+	@include border-radius(20px);
+    behavior: url(PIE.htc);
+    @include transition($Transition);
+	&::-webkit-input-placeholder{ color: #eee; }
+	&:focus {
+		&::-webkit-input-placeholder{
+		    color: #bbb;
+		}
+	    background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc;
+	    color: #6a6f75;
+	    width: 320px;
+	    outline: none;
+    }
+}
+
+.BlueBoxCont {
+	margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+	height: 200px;
+	position: relative;
+	cursor: pointer;
+	a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		z-index:1000;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	&:hover .front {
+	    z-index: 1;
+	    @include transform(rotateY(180deg));
+	}
+
+	&:hover .back {
+	    z-index: 2;   
+	    @include transform(rotateX(0deg));
+	}
+}
+
+.BlueBoxContent {
+	text-align: center;
+    display: table-cell;
+	color: #fff;
+	height: 200px;
+}
+
+.BlueBox {
+	font-size: 26px;
+	display: table;
+	background-color: $RLBlue2;
+	@include border-radius(20px);
+    behavior: url(PIE.htc);
+	@include transition(all 0.5s);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+	&.front i {
+		font-size: 60px;
+		margin-bottom: 8px;
+	}
+	&.front {
+		font-family: $FontTitle;
+		z-index: 2;
+		.BlueBoxContent { vertical-align: middle; }
+	}
+	&.back {
+		.BlueBoxContent {
+	    vertical-align: top;}
+	    z-index: 1;
+	    -webkit-transform: rotateY(-180deg);
+	    -ms-transform: rotateY(-180deg);
+	    -moz-transform: rotateY(-180deg);  
+	    transform: rotateY(-180deg); 
+	    font-size: 14px;
+	}
+}
+
+.BlueBoxTitle {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: left;
+	border-bottom: 1px solid #fff;
+	font-size: 26px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	font-family: $FontTitle;
+}
+.BlueBoxDesc {
+	margin-left: 40px;
+	margin-right: 40px;
+	text-align: left;
+}
+
+
+.HomeProjects.News,
+.HomeProjects.Soon {
+	position: relative;
+	@include border-radius(20px);
+    behavior: url(PIE.htc);
+	border: $RLBotBorder;
+	p >a {
+		color:#333;
+		&:hover { color:$RLBlue2; }
+	}
+	.foot {
+		text-align: right;
+		border-top: $RLBotBorder;
+		font-size: 18px;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 10px;
+		padding-top: 8px;
+		margin-bottom: 8px;
+		font-family: $FontTitle;
+	}
+	.title {
+		border-bottom: $RLBotBorder;
+		font-size: 26px;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 10px;
+		padding-bottom: 5px;
+		font-family: $FontTitle;
+	}
+	p {
+		padding-left: 35px;
+		padding-right: 15px;
+		padding-bottom: 10px;
+		&:before {
+	  		font-family: FontAwesome; 
+	  		position: absolute;
+	  		left: 15px;
+	  		color:$RLBlue2;
+	  	}
+	}
+}
+
+.News p:before { content: "\f058"; }
+.Soon p:before { content: "\f192"; }
+
+.SideChunk {
+	padding-bottom: 30px;
+	padding-left: 0;
+	padding-right: 0;
+ 	position: relative; 
+ 	&:last-child{ padding-bottom: 0; }
+	a:hover > .title { background: $RLBlue1 ;}
+	p {
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 5px;
+	}
+	.title {
+		width: 100%;
+		color: #fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 18px; 
+		background-color: $RLBlue2;
+		@include transition($Transition);
+		font-family: $FontTitle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.img {
+		width: 100%;
+		margin-bottom:5px;
+	}
+}
+
+.RLIndex{
+	&.first{
+		.title {
+			font-size: 38px;
+			border-bottom: $RLBotBorder;
+		}
+		.info{
+			margin-bottom: 11px;
+		}
+	padding-top: 0px;
+	margin-top: 0px;
+	}
+	border-bottom: 1px solid $RLBlue1;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	padding-left: 0;
+	padding-right: 0;
+	&.first .title{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&.first .info {padding: 0;}
+	&:first-child {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&:not(:first-child) {
+		.info { font-size: 10px; }
+		.content { font-size: 12px; }
+	}
+	.img {
+		width: 100%;
+	}
+	.image{ padding-left: 0;padding-right: 0;}
+	.title{
+			font-size: 24px;
+			font-family: $FontTitle;
+			font-weight:500;
+		}
+	.info{
+		margin-bottom: 10px;
+	}
+}
+
+
+#RLPostName {
+	font-family: $FontTitle;
+	font-size: 38px;
+	font-weight:500;
+	border-bottom: $RLBotBorder;
+	&.title {
+		padding:0;
+		&.aboutus{margin-bottom: 15px;}
+	}
+}
+.RLPost.info { padding: 0; margin-bottom: 15px;}
+#RLPostContent {
+	&.guide li{ margin-bottom: 15px; > ol {margin-top: 15px;list-style-type: lower-alpha;}
+}
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 15px;
+	border-bottom: $RLBlue2 solid 1px;
+	padding-left: 0;
+	padding-right: 0;
+	line-height: 1.8em;
+	p { margin-bottom: 20px; }
+	.img {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.tags { margin-bottom: 15px;
+		a {
+			line-height: 1em;
+			font-size: 12px;
+			margin-right: 5px;
+		}
+	}
+}
+
+.RLMoreContent {
+ 	a:hover > .title {background: $RLBlue1;}
+ 	p {
+ 		padding-left: 5px;
+ 		padding-right: 5px;
+ 		padding-top: 5px;
+ 	}
+	.title {
+		width: 100%;
+		color: #fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 18px; 
+		background-color: $RLBlue2;
+	    @include transition($Transition);
+		font-family: $FontTitle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.img { width: 100%; }
+} 
+
+
+
+.RLKeyContacts {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: $RLBotBorder;
+	.name, .position {
+		color: #fff;
+		font-size: 18px; 
+		background-color: $RLBlue2;
+	    @include transition($Transition);
+		font-family: $FontTitle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		a {
+			font-size: 14px;
+			color: #fff;
+		}
+	}
+	.name { font-weight: 700; }
+	.image {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.img { width: 100%; }
+	.bio { margin-top: 5px; }
+	.contact { 
+		margin-top: 5px;
+		a:not(:first-child) {
+			margin-left: 25px;
+		}
+	}
+}
+
+#RLProjects, #RLHowToContainer {
+	border-bottom: $RLBotBorder;
+	> div{ 
+	margin-bottom: 30px; }
+	.name {
+		color: #fff;
+		font-size: 18px; 
+		background-color: $RLBlue2;
+	    @include transition($Transition);
+		font-family: $FontTitle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-weight: 700;
+		a { color: #fff; }
+	}
+	.logo { padding:0; }
+	.img { width: 100%; }
+	.excerpt{margin-top: 5px;}
+}
+
+
+
+#CategoryChunk {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	padding-left: 0;
+	padding-right: 0;
+ 	position: relative; 
+	.title{
+		padding-left: 0;
+		padding-right: 0;
+		font-family: $FontTitle;
+		font-size: 38px;
+		font-weight:300;
+		border-bottom: $RLBotBorder;
+	}
+	.info { padding: 0; }
+	.body {
+		margin-top: 15px;
+		p {
+			padding-left: 35px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+			&:before {
+	  			font-family: FontAwesome; 
+	  			position: absolute;
+	  			left: 15px;
+	  			color: $RLBlue2;
+	  		}
+	  	}
+  		p:last-child {
+  			padding-bottom: 0;
+  			margin-bottom: 0;
+  		}
+  	}
+}
+
+#RLSide {
+	#CategoryChunk {
+		border-bottom: $RLBotBorder;
+	}
+}
+
+div.directory{
+	font-size: 12px;
+	padding-left: 0;
+	padding-right: 0;
+	line-height: 2.4em;
+	background-color: $RLBlue5;
+	&.title{
+		background-color: $RLBlue3;
+		color:#fff;
+		font-weight: 700;
+	}
+	&.entry:nth-of-type(2n){ background-color: $RLBlue4; }
+	&:last-of-type{ margin-bottom: 15px; }
+	&.entry:hover{
+		background-color: #fff;
+	}
+}
+#RLTitleBar{
+	h2 {margin-top: 0;margin-bottom: 0;}
+
+	border-bottom: $RLBotBorder;
+
+
+
+
+
+		padding-bottom: 0px;
+		margin-bottom: 15px;
+		padding-left: 0;
+		padding-right: 0;
+		.title{
+			padding-left: 0;
+			font-family: $FontTitle;
+			font-size: 38px;
+			font-weight:500;
+		}
+		#RLBodySearch { margin-top: 10px; }
+		&.videos { margin-bottom: 0px;}
+}
+
+
+
+
+
+
+
+
+.slider {
+	border: $RLBotBorder;
+	margin-bottom: 30px;
+	position: relative;
+	max-width: 727px;
+	height: 408px;
+	overflow: hidden;
+}
+	
+.slides {
+	padding-left: 0px;
+	height: 100%;
+	/* Simple clear fix */
+	overflow: hidden;
+	list-style: none;
+	@include transition(all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+.slide {
+	height: 100%;
+	float: left;
+	clear: none;
+	position: relative;
+	overflow: hidden;
+	width: 727px;
+	img { width:727px; }
+	a:hover > .description { background: $RLBlue1; }
+	.description {
+		width: 33%;
+		background-color: $RLBlue2;
+		Position: absolute;
+		right:0;
+		top:0;
+		height: 100%;
+		color: #fff;
+		padding: 20px;
+		font-size: 18px;
+	    @include transition($Transition);
+	    z-index: 50;
+		.title{
+			font-size: 30px;
+			font-family: $FontTitle;
+			border-bottom: 1px solid #fff;
+			margin-bottom: 10px;
+			padding-bottom: 5px;
+		}
+		p {margin-left: 10px}
+	}
+}
+
+.slider-arrow {
+	position: absolute;
+	display: block;
+	padding: 15px 20px;
+	margin-bottom: -50px;
+	border: 1px solid #fff;
+	@include border-radius(8px);
+    behavior: url(PIE.htc);
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		background: #fff;
+		color: #ccc;
+	}
+}
+
+.slider-arrow--right { bottom: 50%; right: 90px; }
+.slider-arrow--left { bottom: 50%; left: 90px; }
+
+.slider-nav {
+	position: absolute;
+	bottom: 20px;right: 25px;z-index: 60;
+}
+
+.slider-nav__item {
+	background: #fff;
+	width: 16px;
+	height: 16px;
+	float: left;
+	clear: none;
+	display: block;
+	margin: 0 5px;
+	border: 1px solid #fff;
+	@include border-radius(8px);
+	&:hover { background: $RLBlue2; }
+}
+.slider-nav__item--current { background: $RLBlue1; }
+
+.MenuIcon { 
+	.fa-stack{margin-top: -0.8em;}
+	color:$RLBlue1;
+	display: none;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	border: 0;
+	font-size: 0.6em;
+	&:hover{color: $RLBlue3;}
+}
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pageslide{
+	display:none;
+	position:absolute;
+	position:fixed;
+	top:0;
+	height:100%;
+	z-index:999999;
+	width:260px;
+	background-color: $RLBlue3;
+	color:#FFF;
+	font-size: 14px;
+	line-height: 2.5em;
+	$PageSlideMenuPad: 0.75em;
+	a { color: #fff;}
+	background: $RLNavBar;
+	color: #fff;
+	font-family: $FontTitle;
+	.selected { background-color:$RLNavBarSelected; }
+	ul#NavBar {
+		padding: 0;
+		>li {
+			cursor: pointer;
+			white-space: nowrap;
+			> a {
+				text-align: center; 
+				padding-left: $PageSlideMenuPad;
+			}
+			&:hover {
+				background-color:$RLNavBarHover;
+				@include transition($Transition);
+			}
+		}
+		li {
+			&.selected ul {
+			    display: block;
+			}
+			ul {
+    			display: none;
+				padding: 0;
+				background: $RLNavBarSub;
+			}
+			ul li {
+				cursor: pointer;
+				padding-left: $PageSlideMenuPad*2;
+				ul{
+					margin-left: -$PageSlideMenuPad*2;
+					li {
+						cursor: pointer;
+						padding-left: $PageSlideMenuPad*3;
+						margin-top: $PageSlideMenuPad;
+					}
+				}
+				white-space: nowrap;
+				&:hover { background-color:$RLNavBarSubHover; }
+				&.selected { background-color: $RLNavBarSubSelected; }
+			}
+		}
+	}
+}
+
+
+
+
+.RLVideo{
+	h4{
+		border-bottom: $RLBotBorder;
+		padding-bottom: 5px;
+		font-family: $FontTitle;
+	}
+	margin-bottom: 30px;
+	img {
+		width: 100%;
+	}
+}
+
+.mfp-fade { @include transition($TransitionVid); }
+.mfp-fade.mfp-bg { opacity: 0; }
+.mfp-fade.mfp-bg.mfp-ready { opacity: 0.8; }
+.mfp-fade.mfp-bg.mfp-removing { opacity: 0; }
+.mfp-fade.mfp-wrap .mfp-content { opacity: 0; }
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content { opacity: 1; }
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
+
+#RLFeedback{
+	margin:0 auto;
+	float:none;
+	.control-label, .controls {margin-bottom: 15px;}
+	button#submit { background-color: $RLBlue3;
+		color: #fff;
+		font-family: $FontTitle;
+	    @include transition($Transition);
+		&:hover {background: $RLBlue1;}
+		@include border-radius(3px);
+		}
+		textarea{ height: 10em;}
+}
+
+
+#RLBodySearch{
+	padding-left: 0;padding-right: 0;
+	margin-bottom: 10px;
+	input{
+		border: solid 1px $RLBlue2;
+	}
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+	div.container-fluid #RLNav { display: none; }
+	.MenuIcon { display: inline-block; }
+	
+	#RLNav {display: none;}
+	#pageslide { width: 200px; 
+	ul#NavBar li{display: block;}}
+.slider{ height:200px;
+	.slide .description {
+		width: 100%;
+		font-size: 12px;
+		.title{ font-size: 20px; }}}
+	#RLHead div:not(:first-child) { text-align: center; }
+	#search { display: none; }
+	#Contacts { margin-bottom: 15px; }
+	#RLHead .logo{
+		margin-bottom: 15px;
+		text-align: center;
+		img{ width:100%;
+			max-width: 500px;}
+	}
+	#RLBody{ border-right: 0; }
+	.SideChunk {
+		margin-bottom: 15px;
+		padding-bottom: 0;
+		.image{ display:none; }
+		p {
+			display: inline;
+			padding: 0;
+		}
+	}
+	.News, .Soon{ margin-bottom: 30px;}
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+	.RLMoreContent{
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+	.SideChunk {
+		margin-bottom: 30px;
+		.SideChunkBody{ 
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.SideChunk:last-child { margin-bottom: 0; }
+	.slider { height: 200px; }
+	.slide .description {
+		width: 100%;
+		font-size: 12px;
+		.title{ font-size: 20px; }
+	}
+	#RLFoot {
+		#copy {
+			margin: 0px;
+			font-size: 8px;
+		}
+	}
+   	div.logo img { width:100%; }
+   	#RLHead { 
+	   	padding-top: 15px;
+		padding-bottom: 15px;
+	   	#Contacts a {
+	   		font-size: 11px;
+	   	}
+	     #Strap {
+	     	font-size: 24px;
+	    }
+	}
+	#RLNav {
+		font-size: 12px;
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+			@include border-radius(0);
+   			behavior: url(PIE.htc);
+		}
+		li {
+	   		width: 100%;
+			display: block !important;
+			padding: 0px;
+		}
+		ul#NavBar > li:hover > ul { top:0px; }
+		ul#NavBar > li > ul{
+			top: 0px;
+			position: relative;
+			width:100%;
+			@include opacity(1);
+			display: block-inline;
+			li {
+				text-align: center;
+				width: 100%;
+				padding: 0;
+			}
+		}
+		.column {padding: 0;}
+	}
+
+}
+
+
+
+
+
+@media print {
+	.RLKeyContacts {
+		.image {width: 10%; float:left; margin-right: 10px;}
+		.name, .position {display: inline-block;}
+	}
+	.RLIndex:not(:first-child){
+		.image{ display: none;}
+	}
+	.info{display:inline-block;}
+.title, .tags, .info, .image, .paginate, .contact, #RLFoot {
+	a {
+		&:after {
+    		content: none;
+		}
+	}}
+	.directory {
+		div { display: inline-block;}
+		margin-bottom: 5px;
+	a {
+		&:after {
+    		content: none;
+		}
+	}}
+	body, .lead {
+    	font-size: 12px;}
+    body {
+        margin: 0;
+        padding: 0;
+        color: #000;
+    }
+#RLFoot a, #RLPostContent, .tags {border: none;}
+
+    #RLHead,
+    .RLMoreContent,
+    #RLFoot ul,
+    #RLNav,
+    #RLSide {
+        display: none;
+    }
+}
+
+
+
+
+
+.RLTeam {
+	.title {
+		font-family: $FontTitle;
+		font-weight: 500;
+		font-size: 18px;
+		border-bottom: solid $RLBlue2 1px;
+	}
+	p {
+		margin-bottom: 10px !important;
+	}
+	margin-bottom: 15px;
+}
+
+.RLPageHeader {padding-left: 15px;padding-right: 15px; margin-bottom: 15px;}
+
+
+
+
+
+
+
+#RLFAQContainer{padding-left: 0;padding-right: 0;}
+
+.RLFAQ > div {
+	> label:before { padding-right: 10px;
+		font-family: FontAwesome;
+		content: "\f059"; 
+		font-size: 22px;
+		float: left;
+}
+
+	> article p:first-child:before { padding-right: 10px;
+		font-family: FontAwesome;
+		content: "\f05a"; 
+		font-size: 170px;
+		float: left;
+		color: $RLBlue1;
+			@include opacity(0.1);
+			position:absolute;
+			top:0.3em;
+			left:-10px;
+}
+}
+.RLFAQ label{
+	padding: 10px 20px 10px 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	cursor: pointer;
+	color: #fff;
+	font-size: 19px;
+	background: $RLBlue3;
+	font-weight: 400;
+}
+.RLFAQ label:hover{
+	background: $RLBlue1;
+}
+.RLFAQ input:checked + label,
+.RLFAQ input:checked + label:hover{
+	background: $RLBlue1;
+}
+.RLFAQ label:hover:after,
+.RLFAQ input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 13px;
+	top: 7px;
+}
+.RLFAQ input{
+	display: none;
+}
+.RLFAQ article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	background: $RLBlue5;
+	@include transition(height 0.3s ease-in-out, box-shadow 0.6s linear);
+}
+.RLFAQ article p{
+	line-height: 2em;
+	padding: 20px;
+}
+.RLFAQ input:checked ~ article{
+	@include transition(height 0.5s ease-in-out, box-shadow 0.1s linear);
+}
+.RLFAQ input:checked ~ article.ac-small{
+	height: 140px;
+}
+.RLFAQ input:checked ~ article.ac-medium{
+	height: 180px;
+}
+.RLFAQ input:checked ~ article.ac-large{
+	height: 230px;
+}
