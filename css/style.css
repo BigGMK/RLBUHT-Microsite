@@ -201,7 +201,7 @@ body {
       top: 40px; }
     /* line 187, style.scss */
     #RLNav ul#NavBar > li {
-      cursor: pointer;
+      cursor: default;
       white-space: nowrap; }
       /* line 190, style.scss */
       #RLNav ul#NavBar > li > a {

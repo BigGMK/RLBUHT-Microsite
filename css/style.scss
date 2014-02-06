@@ -185,7 +185,7 @@ body {
     		top: 40px;
 		}
 		>li {
-			cursor: pointer;
+			cursor: default;
 			white-space: nowrap;
 			> a { text-align: center; }
 			&:first-child a {
