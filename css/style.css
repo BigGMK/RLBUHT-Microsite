@@ -2,71 +2,75 @@
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 /* #2980b9; */
 /* #3498db; */
-/* line 50, style.scss */
+/* line 29, style.scss */
+.RLKeyContacts a {
+  white-space: nowrap; }
+
+/* line 31, style.scss */
 .paginate {
   font-size: 11px;
   padding-right: 0;
   padding-left: 0;
   margin-top: 15px; }
-  /* line 55, style.scss */
+  /* line 36, style.scss */
   .paginate .current {
     font-weight: 700; }
-  /* line 56, style.scss */
+  /* line 37, style.scss */
   .paginate span, .paginate a {
     margin-left: 5px; }
-  /* line 57, style.scss */
+  /* line 38, style.scss */
   .paginate.videos {
     margin-bottom: 15px;
     margin-top: 5px; }
 
-/* line 60, style.scss */
+/* line 41, style.scss */
 html, html a {
   -webkit-font-smoothing: antialiased; }
 
-/* line 61, style.scss */
+/* line 42, style.scss */
 img.skype_pnh_logo_img {
   display: none !important; }
 
-/* line 64, style.scss */
+/* line 45, style.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Ubuntu", sans-serif; }
 
-/* line 65, style.scss */
+/* line 46, style.scss */
 blockquote {
   border-left: 5px solid #31bbf0;
   background: #eef8fa; }
 
-/* line 70, style.scss */
+/* line 51, style.scss */
 a.twitter:before, a.email:before, a.tel:before, a.lync:before {
   font-family: FontAwesome;
   margin-right: 0.2em; }
-/* line 74, style.scss */
+/* line 55, style.scss */
 a.twitter:before {
   content: "\f099"; }
-/* line 75, style.scss */
+/* line 56, style.scss */
 a.email:before {
   content: "\f0e0"; }
-/* line 76, style.scss */
+/* line 57, style.scss */
 a.tel:before {
   content: "\f095"; }
-/* line 77, style.scss */
+/* line 58, style.scss */
 a.lync:before {
   content: "\f0c0"; }
 
-/* line 80, style.scss */
+/* line 60, style.scss */
 legend {
   border-bottom: #33b1e1 1px solid; }
 
-/* line 83, style.scss */
+/* line 63, style.scss */
 .WhBorder {
   border-left: solid 1px #fff;
   border-left: solid 1px rgba(255, 255, 255, 0.3); }
 
-/* line 88, style.scss */
+/* line 68, style.scss */
 .tags {
   margin-top: 5px; }
-  /* line 90, style.scss */
+  /* line 70, style.scss */
   .tags a {
     font-size: 10px;
     background-color: #31bbf0;
@@ -88,10 +92,10 @@ legend {
     -o-border-radius: 3px;
     border-radius: 3px;
     behavior: url(PIE.htc); }
-    /* line 101, style.scss */
+    /* line 81, style.scss */
     .tags a:hover {
       background: #009dd9; }
-  /* line 105, style.scss */
+  /* line 85, style.scss */
   .tags:before {
     font-family: FontAwesome;
     content: "\f02c ";
@@ -99,17 +103,18 @@ legend {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6; }
 
-/* line 114, style.scss */
+/* line 94, style.scss */
 a:hover {
   text-decoration: none; }
 
-/* line 115, style.scss */
+/* line 95, style.scss */
 body {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background: #009dd9; }
 
-/* line 121, style.scss */
+/* line 102, style.scss */
 #RLHead {
   position: relative;
   margin-left: 0;
@@ -118,16 +123,20 @@ body {
   background: #009dd9;
   color: #fff;
   position: relative; }
-  /* line 129, style.scss */
+  /* line 110, style.scss */
   #RLHead .logo {
     margin-bottom: 40px; }
-  /* line 130, style.scss */
+    /* line 110, style.scss */
+    #RLHead .logo img {
+      width: 100%;
+      max-width: 500px; }
+  /* line 111, style.scss */
   #RLHead #Contacts a {
     white-space: nowrap;
     font-size: 18px;
     color: #fff;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
     text-decoration: none;
     padding-left: 15px;
     -webkit-transition: all 0.4s ease;
@@ -135,115 +144,121 @@ body {
     -moz-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s; }
-    /* line 138, style.scss */
+    /* line 119, style.scss */
     #RLHead #Contacts a:hover {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-  /* line 142, style.scss */
+  /* line 123, style.scss */
   #RLHead div:not(:first-child) {
     text-align: right; }
-  /* line 143, style.scss */
+  /* line 124, style.scss */
   #RLHead #Strap {
     font-family: "Ubuntu", sans-serif;
     font-size: 38px;
     font-weight: 300; }
-    /* line 147, style.scss */
+    /* line 128, style.scss */
     #RLHead #Strap > span {
       font-weight: 700; }
-  /* line 152, style.scss */
+  /* line 133, style.scss */
   #RLHead #search {
     position: absolute;
     bottom: 15px;
     right: 0; }
-  /* line 157, style.scss */
+  /* line 138, style.scss */
   #RLHead #search form {
     margin-bottom: 0; }
 
-/* line 160, style.scss */
+/* line 141, style.scss */
 #RLNav {
   position: relative;
   margin-left: 0;
   margin-right: 0;
   font-size: 16px;
-  background-color: #33b1e1;
-  color: #fff;
+  background-color: #fff;
+  border-bottom: #33b1e1 1px solid;
+  color: #33b1e1;
   font-family: "Ubuntu", sans-serif;
   z-index: 1 !important; }
-  /* line 168, style.scss */
+  /* line 150, style.scss */
   #RLNav .selected {
     background-color: #009dd9; }
-  /* line 170, style.scss */
+  /* line 152, style.scss */
   #RLNav ul#NavBar {
     display: table;
     width: 100%;
     margin-bottom: 0;
     padding-left: 0; }
-    /* line 176, style.scss */
+    /* line 158, style.scss */
     #RLNav ul#NavBar > li > a:after {
       font-family: FontAwesome;
       content: '\F0D7';
       padding-left: 10px; }
-    /* line 178, style.scss */
+    /* line 160, style.scss */
     #RLNav ul#NavBar > li > ul > li > a:after {
       font-family: FontAwesome;
       content: '\F0DA';
       padding-left: 10px;
       /*caret down*/ }
-    /* line 180, style.scss */
+    /* line 162, style.scss */
     #RLNav ul#NavBar li > a:only-child:after {
       font-family: FontAwesome;
       content: '';
       padding-left: 0; }
-    /* line 183, style.scss */
+    /* line 165, style.scss */
     #RLNav ul#NavBar > li:hover > ul {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
       top: 40px; }
-    /* line 187, style.scss */
+    /* line 169, style.scss */
     #RLNav ul#NavBar > li {
       cursor: default;
       white-space: nowrap; }
-      /* line 190, style.scss */
+      /* line 172, style.scss */
       #RLNav ul#NavBar > li > a {
         text-align: center; }
-      /* line 191, style.scss */
+      /* line 173, style.scss */
       #RLNav ul#NavBar > li:first-child a {
         padding-right: 5px;
         padding-left: 0; }
-      /* line 195, style.scss */
+      /* line 177, style.scss */
       #RLNav ul#NavBar > li:last-child a {
         padding-right: 0;
         padding-left: 5; }
-      /* line 199, style.scss */
+      /* line 181, style.scss */
       #RLNav ul#NavBar > li:hover {
-        background-color: #31bbf0;
+        background-color: #009dd9;
         -webkit-transition: all 0.4s ease;
         -webkit-transition-delay: 0s;
         -moz-transition: all 0.4s ease 0s;
         -o-transition: all 0.4s ease 0s;
         transition: all 0.4s ease 0s; }
-    /* line 204, style.scss */
+        /* line 182, style.scss */
+        #RLNav ul#NavBar > li:hover > a {
+          color: #fff; }
+    /* line 187, style.scss */
     #RLNav ul#NavBar > li:hover > ul {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
-      top: 40px; }
-    /* line 208, style.scss */
+      top: 43px; }
+    /* line 191, style.scss */
     #RLNav ul#NavBar li {
       position: relative;
       list-style-type: none;
       padding: 0;
       display: table-cell; }
-      /* line 213, style.scss */
+      /* line 196, style.scss */
       #RLNav ul#NavBar li a {
         padding-top: 10px;
         padding-bottom: 10px;
         display: block;
-        color: #fff;
+        color: #009dd9;
         text-decoration: none;
         padding-right: 5px;
         padding-left: 5px; }
-      /* line 222, style.scss */
+      /* line 205, style.scss */
       #RLNav ul#NavBar li ul {
+        border: #33b1e1 1px solid;
+        border-top: none;
         display: block;
         z-index: 100;
         padding-left: 0;
@@ -252,7 +267,7 @@ body {
         top: -99999px;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1;
-        background: #31bbf0;
+        background: #fff;
         -webkit-border-radius: 0 0 5px 5px;
         -moz-border-radius: 0 0 5px 5px;
         -ms-border-radius: 0 0 5px 5px;
@@ -264,12 +279,12 @@ body {
         -moz-transition: opacity 0.7s ease 0.1s;
         -o-transition: opacity 0.7s ease 0.1s;
         transition: opacity 0.7s ease 0.1s; }
-        /* line 234, style.scss */
+        /* line 219, style.scss */
         #RLNav ul#NavBar li ul li:hover ul {
           overflow: auto;
           top: 0;
           left: 100%; }
-      /* line 236, style.scss */
+      /* line 221, style.scss */
       #RLNav ul#NavBar li ul li {
         display: block;
         padding: 0;
@@ -282,100 +297,114 @@ body {
         -moz-transition: opacity 0.7s ease 0.1s;
         -o-transition: opacity 0.7s ease 0.1s;
         transition: opacity 0.7s ease 0.1s; }
-        /* line 244, style.scss */
+        /* line 229, style.scss */
         #RLNav ul#NavBar li ul li:last-child {
           -webkit-border-radius: 0 0 5px 5px;
           -moz-border-radius: 0 0 5px 5px;
           -ms-border-radius: 0 0 5px 5px;
           -o-border-radius: 0 0 5px 5px;
           border-radius: 0 0 5px 5px; }
-        /* line 247, style.scss */
+        /* line 232, style.scss */
         #RLNav ul#NavBar li ul li:hover {
-          background-color: #33b1e1; }
-        /* line 248, style.scss */
-        #RLNav ul#NavBar li ul li:hover:last-child {
-          background-color: #33b1e1; }
-        /* line 251, style.scss */
+          background-color: #009dd9;
+          -webkit-transition: all 0.4s ease;
+          -webkit-transition-delay: 0s;
+          -moz-transition: all 0.4s ease 0s;
+          -o-transition: all 0.4s ease 0s;
+          transition: all 0.4s ease 0s; }
+          /* line 233, style.scss */
+          #RLNav ul#NavBar li ul li:hover > a {
+            color: #fff; }
+        /* line 237, style.scss */
         #RLNav ul#NavBar li ul li.selected {
           background-color: #009dd9; }
-      /* line 253, style.scss */
+      /* line 239, style.scss */
       #RLNav ul#NavBar li ul li:last-child a {
         border: none; }
+      /* line 240, style.scss */
+      #RLNav ul#NavBar li ul li ul {
+        border-top: #33b1e1 1px solid;
+        -webkit-border-radius: 0 5px 5px 5px;
+        -moz-border-radius: 0 5px 5px 5px;
+        -ms-border-radius: 0 5px 5px 5px;
+        -o-border-radius: 0 5px 5px 5px;
+        border-radius: 0 5px 5px 5px; }
 
-/* line 259, style.scss */
+/* line 248, style.scss */
 #RLMain {
+  background: #fff;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   position: relative;
   z-index: 0 !important; }
 
-/* line 268, style.scss */
+/* line 258, style.scss */
 #RLBody {
   border-right: solid #33b1e1 1px; }
-  /* line 270, style.scss */
+  /* line 260, style.scss */
   #RLBody.fullwidth {
     border-right: 0; }
 
-/* line 273, style.scss */
+/* line 263, style.scss */
 #RLFoot {
   font-weight: 600;
   margin-left: 0;
   margin-right: 0;
-  background: #33b1e1;
+  background: #009dd9;
   color: #fff;
   padding-top: 20px;
   font-size: 11px;
   position: relative;
   padding-bottom: 25px; }
-  /* line 274, style.scss */
+  /* line 264, style.scss */
   #RLFoot .em {
     font-weight: 600; }
-  /* line 284, style.scss */
+  /* line 274, style.scss */
   #RLFoot a {
     border-bottom: #33b1e1 1px solid; }
-  /* line 287, style.scss */
+  /* line 277, style.scss */
   #RLFoot a:hover {
     border-bottom: solid 1px #fff;
     border-bottom: solid 1px rgba(255, 255, 255, 0.3); }
-  /* line 291, style.scss */
+  /* line 281, style.scss */
   #RLFoot #copy {
     text-align: center;
     color: #fff;
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 10px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-    opacity: 0.75; }
-    /* line 298, style.scss */
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+    opacity: 0.85; }
+    /* line 288, style.scss */
     #RLFoot #copy a {
       color: #fff;
       font-weight: 700; }
-  /* line 303, style.scss */
+  /* line 293, style.scss */
   #RLFoot ul {
     padding: 0;
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     list-style-type: none; }
-    /* line 309, style.scss */
+    /* line 299, style.scss */
     #RLFoot ul li {
-      font-weight: 300;
+      font-weight: 400;
       text-align: left;
       padding-top: 5px;
       white-space: nowrap;
       padding-bottom: 2px; }
-      /* line 315, style.scss */
+      /* line 305, style.scss */
       #RLFoot ul li ul {
         padding-left: 10px; }
-    /* line 317, style.scss */
+    /* line 307, style.scss */
     #RLFoot ul a {
       padding-bottom: 1px;
       display: block;
       color: #fff; }
 
-/* line 325, style.scss */
+/* line 315, style.scss */
 #RLSearchInput {
   background: url(/media/search-white.png) no-repeat 10px 8px #33b1e1;
   border: 0 none;
@@ -394,20 +423,20 @@ body {
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s; }
-  /* line 335, style.scss */
+  /* line 325, style.scss */
   #RLSearchInput::-webkit-input-placeholder {
     color: #eee; }
-  /* line 336, style.scss */
+  /* line 326, style.scss */
   #RLSearchInput:focus {
     background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc;
     color: #6a6f75;
     width: 320px;
     outline: none; }
-    /* line 337, style.scss */
+    /* line 327, style.scss */
     #RLSearchInput:focus::-webkit-input-placeholder {
       color: #bbb; }
 
-/* line 347, style.scss */
+/* line 337, style.scss */
 .BlueBoxCont {
   margin-bottom: 30px;
   position: relative;
@@ -415,7 +444,7 @@ body {
   height: 200px;
   position: relative;
   cursor: pointer; }
-  /* line 354, style.scss */
+  /* line 345, style.scss */
   .BlueBoxCont a {
     display: block;
     height: 100%;
@@ -424,7 +453,7 @@ body {
     position: absolute;
     top: 0;
     left: 0; }
-  /* line 363, style.scss */
+  /* line 354, style.scss */
   .BlueBoxCont:hover .front {
     z-index: 1;
     -webkit-transform: rotateY(180deg);
@@ -432,7 +461,7 @@ body {
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg); }
-  /* line 368, style.scss */
+  /* line 359, style.scss */
   .BlueBoxCont:hover .back {
     z-index: 2;
     -webkit-transform: rotateX(0deg);
@@ -441,18 +470,30 @@ body {
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg); }
 
-/* line 374, style.scss */
+/* line 365, style.scss */
 .BlueBoxContent {
   text-align: center;
   display: table-cell;
   color: #fff;
   height: 200px; }
 
-/* line 381, style.scss */
+/* line 372, style.scss */
+.front .BlueBoxContent {
+  border: 1px solid #009dd9;
+  background-color: #fff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: #009dd9; }
+
+/* line 382, style.scss */
 .BlueBox {
   font-size: 26px;
   display: table;
-  background-color: #33b1e1;
+  background-color: #009dd9;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -471,30 +512,62 @@ body {
   top: 0px;
   left: 0px;
   width: 100%; }
-  /* line 396, style.scss */
+  /* line 400, style.scss */
+  .BlueBox.software {
+    background: url(/media/software.jpg) no-repeat; }
+  /* line 401, style.scss */
+  .BlueBox.it {
+    background: url(/media/it.jpg) no-repeat; }
+  /* line 402, style.scss */
+  .BlueBox.mobile {
+    background: url(/media/mobile.jpg) no-repeat; }
+  /* line 403, style.scss */
+  .BlueBox.other {
+    background: url(/media/other.jpg) no-repeat; }
+  /* line 406, style.scss */
+  .BlueBox.it, .BlueBox.software, .BlueBox.other, .BlueBox.mobile, .BlueBox.support-index {
+    background-size: 100%; }
+    /* line 409, style.scss */
+    .BlueBox.it .BlueBoxContent, .BlueBox.software .BlueBoxContent, .BlueBox.other .BlueBoxContent, .BlueBox.mobile .BlueBoxContent, .BlueBox.support-index .BlueBoxContent {
+      background-color: #fff;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #333; }
+    /* line 416, style.scss */
+    .BlueBox.it.software .BlueBoxContent, .BlueBox.it.it .BlueBoxContent, .BlueBox.it.mobile .BlueBoxContent, .BlueBox.it.other .BlueBoxContent, .BlueBox.software.software .BlueBoxContent, .BlueBox.software.it .BlueBoxContent, .BlueBox.software.mobile .BlueBoxContent, .BlueBox.software.other .BlueBoxContent, .BlueBox.other.software .BlueBoxContent, .BlueBox.other.it .BlueBoxContent, .BlueBox.other.mobile .BlueBoxContent, .BlueBox.other.other .BlueBoxContent, .BlueBox.mobile.software .BlueBoxContent, .BlueBox.mobile.it .BlueBoxContent, .BlueBox.mobile.mobile .BlueBoxContent, .BlueBox.mobile.other .BlueBoxContent, .BlueBox.support-index.software .BlueBoxContent, .BlueBox.support-index.it .BlueBoxContent, .BlueBox.support-index.mobile .BlueBoxContent, .BlueBox.support-index.other .BlueBoxContent {
+      background-color: rgba(255, 255, 255, 0.7); }
+  /* line 423, style.scss */
+  .BlueBox.support-index .BlueBoxContent {
+    color: #009dd9; }
+  /* line 431, style.scss */
   .BlueBox.front i {
     font-size: 60px;
     margin-bottom: 8px; }
-  /* line 400, style.scss */
+  /* line 435, style.scss */
   .BlueBox.front {
     font-family: "Ubuntu", sans-serif;
     z-index: 2; }
-    /* line 403, style.scss */
+    /* line 438, style.scss */
     .BlueBox.front .BlueBoxContent {
       vertical-align: middle; }
-  /* line 405, style.scss */
+  /* line 440, style.scss */
   .BlueBox.back {
     z-index: 1;
     -webkit-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
     font-size: 14px; }
-    /* line 406, style.scss */
+    /* line 441, style.scss */
     .BlueBox.back .BlueBoxContent {
       vertical-align: top; }
 
-/* line 417, style.scss */
+/* line 449, style.scss */
 .BlueBoxTitle {
   margin-top: 20px;
   margin-left: 20px;
@@ -506,13 +579,13 @@ body {
   padding-bottom: 5px;
   font-family: "Ubuntu", sans-serif; }
 
-/* line 428, style.scss */
+/* line 460, style.scss */
 .BlueBoxDesc {
   margin-left: 40px;
   margin-right: 40px;
   text-align: left; }
 
-/* line 436, style.scss */
+/* line 467, style.scss */
 .HomeProjects.News,
 .HomeProjects.Soon {
   position: relative;
@@ -523,15 +596,15 @@ body {
   border-radius: 20px;
   behavior: url(PIE.htc);
   border: #33b1e1 1px solid; }
-  /* line 441, style.scss */
+  /* line 472, style.scss */
   .HomeProjects.News p > a,
   .HomeProjects.Soon p > a {
     color: #333; }
-    /* line 443, style.scss */
+    /* line 474, style.scss */
     .HomeProjects.News p > a:hover,
     .HomeProjects.Soon p > a:hover {
       color: #33b1e1; }
-  /* line 445, style.scss */
+  /* line 476, style.scss */
   .HomeProjects.News .foot,
   .HomeProjects.Soon .foot {
     text-align: right;
@@ -544,7 +617,7 @@ body {
     padding-top: 8px;
     margin-bottom: 8px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 457, style.scss */
+  /* line 488, style.scss */
   .HomeProjects.News .title,
   .HomeProjects.Soon .title {
     border-bottom: #33b1e1 1px solid;
@@ -555,13 +628,13 @@ body {
     margin-bottom: 10px;
     padding-bottom: 5px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 467, style.scss */
+  /* line 498, style.scss */
   .HomeProjects.News p,
   .HomeProjects.Soon p {
     padding-left: 35px;
     padding-right: 15px;
     padding-bottom: 10px; }
-    /* line 471, style.scss */
+    /* line 502, style.scss */
     .HomeProjects.News p:before,
     .HomeProjects.Soon p:before {
       font-family: FontAwesome;
@@ -569,39 +642,31 @@ body {
       left: 15px;
       color: #33b1e1; }
 
-/* line 480, style.scss */
-.News p:before {
-  content: "\f058"; }
-
-/* line 481, style.scss */
-.Soon p:before {
-  content: "\f192"; }
-
-/* line 483, style.scss */
+/* line 512, style.scss */
 .SideChunk {
   padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
   position: relative; }
-  /* line 488, style.scss */
+  /* line 517, style.scss */
   .SideChunk:last-child {
     padding-bottom: 0; }
-  /* line 489, style.scss */
+  /* line 518, style.scss */
   .SideChunk a:hover > .title {
-    background: #009dd9; }
-  /* line 490, style.scss */
+    background: #33b1e1; }
+  /* line 519, style.scss */
   .SideChunk p {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px; }
-  /* line 495, style.scss */
+  /* line 524, style.scss */
   .SideChunk .title {
     width: 100%;
     color: #fff;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 18px;
-    background-color: #33b1e1;
+    background-color: #009dd9;
     -webkit-transition: all 0.4s ease;
     -webkit-transition-delay: 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -610,81 +675,81 @@ body {
     font-family: "Ubuntu", sans-serif;
     padding-top: 5px;
     padding-bottom: 5px; }
-  /* line 507, style.scss */
+  /* line 536, style.scss */
   .SideChunk .img {
     width: 100%;
     margin-bottom: 5px; }
 
-/* line 513, style.scss */
+/* line 542, style.scss */
 .RLIndex {
   border-bottom: 1px solid #009dd9;
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0; }
-  /* line 514, style.scss */
+  /* line 543, style.scss */
   .RLIndex.first {
     padding-top: 0px;
     margin-top: 0px; }
-    /* line 515, style.scss */
+    /* line 544, style.scss */
     .RLIndex.first .title {
       font-size: 38px;
       border-bottom: #33b1e1 1px solid; }
-    /* line 519, style.scss */
+    /* line 548, style.scss */
     .RLIndex.first .info {
       margin-bottom: 11px; }
-  /* line 530, style.scss */
+  /* line 559, style.scss */
   .RLIndex.first .title {
     padding-left: 0;
     padding-right: 0; }
-  /* line 534, style.scss */
+  /* line 563, style.scss */
   .RLIndex.first .info {
     padding: 0; }
-  /* line 535, style.scss */
+  /* line 564, style.scss */
   .RLIndex:first-child {
     padding-left: 0;
     padding-right: 0; }
-  /* line 540, style.scss */
+  /* line 569, style.scss */
   .RLIndex:not(:first-child) .info {
     font-size: 10px; }
-  /* line 541, style.scss */
+  /* line 570, style.scss */
   .RLIndex:not(:first-child) .content {
     font-size: 12px; }
-  /* line 543, style.scss */
+  /* line 572, style.scss */
   .RLIndex .img {
     width: 100%; }
-  /* line 546, style.scss */
+  /* line 575, style.scss */
   .RLIndex .image {
     padding-left: 0;
     padding-right: 0; }
-  /* line 547, style.scss */
+  /* line 576, style.scss */
   .RLIndex .title {
     font-size: 24px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 500; }
-  /* line 552, style.scss */
+  /* line 581, style.scss */
   .RLIndex .info {
     margin-bottom: 10px; }
 
-/* line 558, style.scss */
+/* line 587, style.scss */
 #RLPostName {
   font-family: "Ubuntu", sans-serif;
   font-size: 38px;
   font-weight: 500;
   border-bottom: #33b1e1 1px solid; }
-  /* line 563, style.scss */
+  /* line 592, style.scss */
   #RLPostName.title {
     padding: 0; }
-    /* line 565, style.scss */
+    /* line 594, style.scss */
     #RLPostName.title.aboutus {
       margin-bottom: 15px; }
 
-/* line 568, style.scss */
+/* line 597, style.scss */
 .RLPost.info {
   padding: 0;
   margin-bottom: 15px; }
 
-/* line 569, style.scss */
+/* line 598, style.scss */
 #RLPostContent {
   padding-left: 0;
   padding-right: 0;
@@ -693,38 +758,44 @@ body {
   padding-left: 0;
   padding-right: 0;
   line-height: 1.8em; }
-  /* line 570, style.scss */
+  /* line 599, style.scss */
   #RLPostContent.guide li {
     margin-bottom: 15px; }
-    /* line 570, style.scss */
+    /* line 599, style.scss */
     #RLPostContent.guide li > ol {
       margin-top: 15px;
       list-style-type: lower-alpha; }
-  /* line 579, style.scss */
+  /* line 608, style.scss */
+  #RLPostContent.project {
+    border-bottom: none;
+    margin-bottom: 0; }
+  /* line 612, style.scss */
   #RLPostContent p {
     margin-bottom: 20px; }
-  /* line 580, style.scss */
+  /* line 613, style.scss */
   #RLPostContent .img {
-    width: 100%;
+    width: 50%;
+    float: right;
+    margin-left: 15px;
     margin-bottom: 15px; }
-  /* line 584, style.scss */
+  /* line 619, style.scss */
   #RLPostContent .tags {
     margin-bottom: 15px; }
-    /* line 585, style.scss */
+    /* line 620, style.scss */
     #RLPostContent .tags a {
       line-height: 1em;
       font-size: 12px;
       margin-right: 5px; }
 
-/* line 594, style.scss */
+/* line 629, style.scss */
 .RLMoreContent a:hover > .title {
   background: #009dd9; }
-/* line 595, style.scss */
+/* line 630, style.scss */
 .RLMoreContent p {
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 5px; }
-/* line 600, style.scss */
+/* line 635, style.scss */
 .RLMoreContent .title {
   width: 100%;
   color: #fff;
@@ -740,18 +811,18 @@ body {
   font-family: "Ubuntu", sans-serif;
   padding-top: 5px;
   padding-bottom: 5px; }
-/* line 612, style.scss */
+/* line 647, style.scss */
 .RLMoreContent .img {
   width: 100%; }
 
-/* line 617, style.scss */
+/* line 652, style.scss */
 .RLKeyContacts {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: #33b1e1 1px solid; }
-  /* line 623, style.scss */
+  /* line 658, style.scss */
   .RLKeyContacts .name, .RLKeyContacts .position {
     color: #fff;
     font-size: 18px;
@@ -764,37 +835,37 @@ body {
     font-family: "Ubuntu", sans-serif;
     padding-top: 5px;
     padding-bottom: 5px; }
-    /* line 631, style.scss */
+    /* line 666, style.scss */
     .RLKeyContacts .name a, .RLKeyContacts .position a {
       font-size: 14px;
       color: #fff; }
-  /* line 636, style.scss */
+  /* line 671, style.scss */
   .RLKeyContacts .name {
     font-weight: 700; }
-  /* line 637, style.scss */
+  /* line 672, style.scss */
   .RLKeyContacts .image {
     padding-left: 0;
     padding-right: 0; }
-  /* line 641, style.scss */
+  /* line 676, style.scss */
   .RLKeyContacts .img {
     width: 100%; }
-  /* line 642, style.scss */
+  /* line 677, style.scss */
   .RLKeyContacts .bio {
     margin-top: 5px; }
-  /* line 643, style.scss */
+  /* line 678, style.scss */
   .RLKeyContacts .contact {
     margin-top: 5px; }
-    /* line 645, style.scss */
+    /* line 680, style.scss */
     .RLKeyContacts .contact a:not(:first-child) {
       margin-left: 25px; }
 
-/* line 651, style.scss */
+/* line 686, style.scss */
 #RLProjects, #RLHowToContainer {
   border-bottom: #33b1e1 1px solid; }
-  /* line 653, style.scss */
+  /* line 688, style.scss */
   #RLProjects > div, #RLHowToContainer > div {
     margin-bottom: 30px; }
-  /* line 655, style.scss */
+  /* line 690, style.scss */
   #RLProjects .name, #RLHowToContainer .name {
     color: #fff;
     font-size: 18px;
@@ -808,107 +879,126 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: 700; }
-    /* line 664, style.scss */
+    /* line 699, style.scss */
     #RLProjects .name a, #RLHowToContainer .name a {
       color: #fff; }
-  /* line 666, style.scss */
+  /* line 701, style.scss */
   #RLProjects .logo, #RLHowToContainer .logo {
     padding: 0; }
-  /* line 667, style.scss */
+  /* line 702, style.scss */
   #RLProjects .img, #RLHowToContainer .img {
     width: 100%; }
-  /* line 668, style.scss */
+  /* line 703, style.scss */
   #RLProjects .excerpt, #RLHowToContainer .excerpt {
     margin-top: 5px; }
 
-/* line 673, style.scss */
-#CategoryChunk {
+/* line 705, style.scss */
+.project-icons {
+  margin-top: 15px; }
+
+/* line 708, style.scss */
+.CategoryChunk {
   margin-bottom: 15px;
   padding-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
   position: relative; }
-  /* line 679, style.scss */
-  #CategoryChunk .title {
+  /* line 709, style.scss */
+  .CategoryChunk.News p:before {
+    content: "\f058"; }
+  /* line 710, style.scss */
+  .CategoryChunk.Soon p:before {
+    content: "\f192"; }
+  /* line 711, style.scss */
+  .CategoryChunk.Videos p:before {
+    content: "\f008"; }
+  /* line 712, style.scss */
+  .CategoryChunk.HowTos p:before {
+    content: "\f05a"; }
+  /* line 713, style.scss */
+  .CategoryChunk.FAQ p:before {
+    content: "\f05a"; }
+  /* line 719, style.scss */
+  .CategoryChunk .title {
     padding-left: 0;
     padding-right: 0;
     font-family: "Ubuntu", sans-serif;
     font-size: 38px;
     font-weight: 300;
     border-bottom: #33b1e1 1px solid; }
-  /* line 687, style.scss */
-  #CategoryChunk .info {
+  /* line 727, style.scss */
+  .CategoryChunk .info {
     padding: 0; }
-  /* line 688, style.scss */
-  #CategoryChunk .body {
+  /* line 728, style.scss */
+  .CategoryChunk .body {
     margin-top: 15px; }
-    /* line 690, style.scss */
-    #CategoryChunk .body p {
+    /* line 730, style.scss */
+    .CategoryChunk .body p {
       padding-left: 35px;
       padding-right: 15px;
       padding-bottom: 10px; }
-      /* line 694, style.scss */
-      #CategoryChunk .body p:before {
+      /* line 734, style.scss */
+      .CategoryChunk .body p:before {
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
         color: #33b1e1; }
-    /* line 701, style.scss */
-    #CategoryChunk .body p:last-child {
+    /* line 741, style.scss */
+    .CategoryChunk .body p:last-child {
       padding-bottom: 0;
       margin-bottom: 0; }
 
-/* line 709, style.scss */
+/* line 749, style.scss */
 #RLSide #CategoryChunk {
   border-bottom: #33b1e1 1px solid; }
 
-/* line 714, style.scss */
+/* line 754, style.scss */
 div.directory {
   font-size: 12px;
   padding-left: 0;
   padding-right: 0;
   line-height: 2.4em;
   background-color: #eef8fa; }
-  /* line 720, style.scss */
+  /* line 760, style.scss */
   div.directory.title {
     background-color: #31bbf0;
     color: #fff;
     font-weight: 700; }
-  /* line 725, style.scss */
+  /* line 765, style.scss */
   div.directory.entry:nth-of-type(2n) {
     background-color: #d8eff5; }
-  /* line 726, style.scss */
+  /* line 766, style.scss */
   div.directory:last-of-type {
     margin-bottom: 15px; }
-  /* line 727, style.scss */
+  /* line 767, style.scss */
   div.directory.entry:hover {
     background-color: #fff; }
 
-/* line 731, style.scss */
+/* line 771, style.scss */
 #RLTitleBar {
   border-bottom: #33b1e1 1px solid;
   padding-bottom: 0px;
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0; }
-  /* line 732, style.scss */
+  /* line 772, style.scss */
   #RLTitleBar h2 {
     margin-top: 0;
     margin-bottom: 0; }
-  /* line 744, style.scss */
+  /* line 784, style.scss */
   #RLTitleBar .title {
     padding-left: 0;
     font-family: "Ubuntu", sans-serif;
     font-size: 38px;
     font-weight: 500; }
-  /* line 750, style.scss */
+  /* line 790, style.scss */
   #RLTitleBar #RLBodySearch {
     margin-top: 10px; }
-  /* line 751, style.scss */
+  /* line 791, style.scss */
   #RLTitleBar.videos {
     margin-bottom: 0px; }
 
-/* line 761, style.scss */
+/* line 801, style.scss */
 .slider {
   border: #33b1e1 1px solid;
   margin-bottom: 30px;
@@ -917,7 +1007,7 @@ div.directory {
   height: 408px;
   overflow: hidden; }
 
-/* line 770, style.scss */
+/* line 810, style.scss */
 .slides {
   padding-left: 0px;
   height: 100%;
@@ -929,7 +1019,7 @@ div.directory {
   -o-transition: all 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 1000ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-/* line 779, style.scss */
+/* line 819, style.scss */
 .slide {
   height: 100%;
   float: left;
@@ -937,16 +1027,16 @@ div.directory {
   position: relative;
   overflow: hidden;
   width: 727px; }
-  /* line 786, style.scss */
+  /* line 826, style.scss */
   .slide img {
     width: 727px; }
-  /* line 787, style.scss */
+  /* line 827, style.scss */
   .slide a:hover > .description {
-    background: #009dd9; }
-  /* line 788, style.scss */
+    background: #33b1e1; }
+  /* line 828, style.scss */
   .slide .description {
     width: 33%;
-    background-color: #33b1e1;
+    background-color: #009dd9;
     Position: absolute;
     right: 0;
     top: 0;
@@ -960,18 +1050,18 @@ div.directory {
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     z-index: 50; }
-    /* line 800, style.scss */
+    /* line 840, style.scss */
     .slide .description .title {
       font-size: 30px;
       font-family: "Ubuntu", sans-serif;
       border-bottom: 1px solid #fff;
       margin-bottom: 10px;
       padding-bottom: 5px; }
-    /* line 807, style.scss */
+    /* line 847, style.scss */
     .slide .description p {
       margin-left: 10px; }
 
-/* line 811, style.scss */
+/* line 851, style.scss */
 .slider-arrow {
   position: absolute;
   display: block;
@@ -986,29 +1076,29 @@ div.directory {
   behavior: url(PIE.htc);
   color: #fff;
   text-decoration: none; }
-  /* line 821, style.scss */
+  /* line 861, style.scss */
   .slider-arrow:hover {
     background: #fff;
     color: #ccc; }
 
-/* line 827, style.scss */
+/* line 867, style.scss */
 .slider-arrow--right {
   bottom: 50%;
   right: 90px; }
 
-/* line 828, style.scss */
+/* line 868, style.scss */
 .slider-arrow--left {
   bottom: 50%;
   left: 90px; }
 
-/* line 830, style.scss */
+/* line 870, style.scss */
 .slider-nav {
   position: absolute;
   bottom: 20px;
   right: 25px;
   z-index: 60; }
 
-/* line 835, style.scss */
+/* line 875, style.scss */
 .slider-nav__item {
   background: #fff;
   width: 16px;
@@ -1023,15 +1113,15 @@ div.directory {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px; }
-  /* line 845, style.scss */
+  /* line 885, style.scss */
   .slider-nav__item:hover {
     background: #33b1e1; }
 
-/* line 847, style.scss */
+/* line 887, style.scss */
 .slider-nav__item--current {
   background: #009dd9; }
 
-/* line 849, style.scss */
+/* line 889, style.scss */
 .MenuIcon {
   color: #009dd9;
   display: none;
@@ -1040,14 +1130,18 @@ div.directory {
   margin-left: 10px;
   border: 0;
   font-size: 0.6em; }
-  /* line 850, style.scss */
+  /* line 890, style.scss */
   .MenuIcon .fa-stack {
     margin-top: -0.8em; }
-  /* line 858, style.scss */
+  /* line 898, style.scss */
   .MenuIcon:hover {
     color: #31bbf0; }
 
-/* line 879, style.scss */
+/* line 904, style.scss */
+.twitter-follow-button {
+  margin-top: 30px; }
+
+/* line 919, style.scss */
 #pageslide {
   display: none;
   position: absolute;
@@ -1063,24 +1157,24 @@ div.directory {
   background: #33b1e1;
   color: #fff;
   font-family: "Ubuntu", sans-serif; }
-  /* line 892, style.scss */
+  /* line 932, style.scss */
   #pageslide a {
     color: #fff; }
-  /* line 896, style.scss */
+  /* line 936, style.scss */
   #pageslide .selected {
     background-color: #009dd9; }
-  /* line 897, style.scss */
+  /* line 937, style.scss */
   #pageslide ul#NavBar {
     padding: 0; }
-    /* line 899, style.scss */
+    /* line 939, style.scss */
     #pageslide ul#NavBar > li {
       cursor: pointer;
       white-space: nowrap; }
-      /* line 902, style.scss */
+      /* line 942, style.scss */
       #pageslide ul#NavBar > li > a {
         text-align: center;
         padding-left: 0.75em; }
-      /* line 906, style.scss */
+      /* line 946, style.scss */
       #pageslide ul#NavBar > li:hover {
         background-color: #31bbf0;
         -webkit-transition: all 0.4s ease;
@@ -1088,85 +1182,85 @@ div.directory {
         -moz-transition: all 0.4s ease 0s;
         -o-transition: all 0.4s ease 0s;
         transition: all 0.4s ease 0s; }
-    /* line 912, style.scss */
+    /* line 952, style.scss */
     #pageslide ul#NavBar li.selected ul {
       display: block; }
-    /* line 915, style.scss */
+    /* line 955, style.scss */
     #pageslide ul#NavBar li ul {
       display: none;
       padding: 0;
       background: #31bbf0; }
-    /* line 920, style.scss */
+    /* line 960, style.scss */
     #pageslide ul#NavBar li ul li {
       cursor: pointer;
       padding-left: 1.5em;
       white-space: nowrap; }
-      /* line 923, style.scss */
+      /* line 963, style.scss */
       #pageslide ul#NavBar li ul li ul {
         margin-left: -1.5em; }
-        /* line 925, style.scss */
+        /* line 965, style.scss */
         #pageslide ul#NavBar li ul li ul li {
           cursor: pointer;
           padding-left: 2.25em;
           margin-top: 0.75em; }
-      /* line 932, style.scss */
+      /* line 972, style.scss */
       #pageslide ul#NavBar li ul li:hover {
         background-color: #33b1e1; }
-      /* line 933, style.scss */
+      /* line 973, style.scss */
       #pageslide ul#NavBar li ul li.selected {
         background-color: #009dd9; }
 
-/* line 942, style.scss */
+/* line 982, style.scss */
 .RLVideo {
   margin-bottom: 30px; }
-  /* line 943, style.scss */
+  /* line 983, style.scss */
   .RLVideo h4 {
     border-bottom: #33b1e1 1px solid;
     padding-bottom: 5px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 949, style.scss */
+  /* line 989, style.scss */
   .RLVideo img {
     width: 100%; }
 
-/* line 954, style.scss */
+/* line 994, style.scss */
 .mfp-fade {
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
 
-/* line 955, style.scss */
+/* line 995, style.scss */
 .mfp-fade.mfp-bg {
   opacity: 0; }
 
-/* line 956, style.scss */
+/* line 996, style.scss */
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8; }
 
-/* line 957, style.scss */
+/* line 997, style.scss */
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0; }
 
-/* line 958, style.scss */
+/* line 998, style.scss */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0; }
 
-/* line 959, style.scss */
+/* line 999, style.scss */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
   opacity: 1; }
 
-/* line 960, style.scss */
+/* line 1000, style.scss */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0; }
 
-/* line 962, style.scss */
+/* line 1002, style.scss */
 #RLFeedback {
   margin: 0 auto;
   float: none; }
-  /* line 965, style.scss */
+  /* line 1005, style.scss */
   #RLFeedback .control-label, #RLFeedback .controls {
     margin-bottom: 15px; }
-  /* line 966, style.scss */
+  /* line 1006, style.scss */
   #RLFeedback button#submit {
     background-color: #31bbf0;
     color: #fff;
@@ -1181,148 +1275,156 @@ div.directory {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
-    /* line 970, style.scss */
+    /* line 1010, style.scss */
     #RLFeedback button#submit:hover {
       background: #009dd9; }
-  /* line 973, style.scss */
+  /* line 1013, style.scss */
   #RLFeedback textarea {
     height: 10em; }
 
-/* line 977, style.scss */
+/* line 1017, style.scss */
 #RLBodySearch {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 10px; }
-  /* line 980, style.scss */
+  /* line 1020, style.scss */
   #RLBodySearch input {
     border: solid 1px #33b1e1; }
 
+@media (max-width: 1200px) {
+  /* line 1027, style.scss */
+  #RLHead .logo {
+    margin-bottom: 80px; } }
 @media (max-width: 768px) {
-  /* line 992, style.scss */
+  /* line 1039, style.scss */
+  #RLHead .logo {
+    margin-bottom: 40px; }
+
+  /* line 1042, style.scss */
   div.container-fluid #RLNav {
     display: none; }
 
-  /* line 993, style.scss */
+  /* line 1043, style.scss */
   .MenuIcon {
     display: inline-block; }
 
-  /* line 995, style.scss */
+  /* line 1045, style.scss */
   #RLNav {
     display: none; }
 
-  /* line 996, style.scss */
+  /* line 1046, style.scss */
   #pageslide {
     width: 200px; }
-    /* line 997, style.scss */
+    /* line 1047, style.scss */
     #pageslide ul#NavBar li {
       display: block; }
 
-  /* line 998, style.scss */
+  /* line 1048, style.scss */
   .slider {
     height: 200px; }
-    /* line 999, style.scss */
+    /* line 1049, style.scss */
     .slider .slide .description {
       width: 100%;
       font-size: 12px; }
-      /* line 1002, style.scss */
+      /* line 1052, style.scss */
       .slider .slide .description .title {
         font-size: 20px; }
 
-  /* line 1003, style.scss */
+  /* line 1053, style.scss */
   #RLHead div:not(:first-child) {
     text-align: center; }
 
-  /* line 1004, style.scss */
+  /* line 1054, style.scss */
   #search {
     display: none; }
 
-  /* line 1005, style.scss */
+  /* line 1055, style.scss */
   #Contacts {
     margin-bottom: 15px; }
 
-  /* line 1006, style.scss */
+  /* line 1056, style.scss */
   #RLHead .logo {
     margin-bottom: 15px;
     text-align: center; }
-    /* line 1009, style.scss */
+    /* line 1059, style.scss */
     #RLHead .logo img {
       width: 100%;
       max-width: 500px; }
 
-  /* line 1012, style.scss */
+  /* line 1062, style.scss */
   #RLBody {
     border-right: 0; }
 
-  /* line 1013, style.scss */
+  /* line 1063, style.scss */
   .SideChunk {
     margin-bottom: 15px;
     padding-bottom: 0; }
-    /* line 1016, style.scss */
+    /* line 1066, style.scss */
     .SideChunk .image {
       display: none; }
-    /* line 1017, style.scss */
+    /* line 1067, style.scss */
     .SideChunk p {
       display: inline;
       padding: 0; }
 
-  /* line 1022, style.scss */
+  /* line 1072, style.scss */
   .News, .Soon {
     margin-bottom: 30px; } }
 @media (max-width: 480px) {
-  /* line 1032, style.scss */
+  /* line 1082, style.scss */
   .RLMoreContent {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 30px; }
 
-  /* line 1037, style.scss */
+  /* line 1087, style.scss */
   .SideChunk {
     margin-bottom: 30px; }
-    /* line 1039, style.scss */
+    /* line 1089, style.scss */
     .SideChunk .SideChunkBody {
       padding-left: 10px;
       padding-right: 10px; }
 
-  /* line 1044, style.scss */
+  /* line 1094, style.scss */
   .SideChunk:last-child {
     margin-bottom: 0; }
 
-  /* line 1045, style.scss */
+  /* line 1095, style.scss */
   .slider {
     height: 200px; }
 
-  /* line 1046, style.scss */
+  /* line 1096, style.scss */
   .slide .description {
     width: 100%;
     font-size: 12px; }
-    /* line 1049, style.scss */
+    /* line 1099, style.scss */
     .slide .description .title {
       font-size: 20px; }
 
-  /* line 1052, style.scss */
+  /* line 1102, style.scss */
   #RLFoot #copy {
     margin: 0px;
     font-size: 8px; }
 
-  /* line 1057, style.scss */
+  /* line 1107, style.scss */
   div.logo img {
     width: 100%; }
 
-  /* line 1058, style.scss */
+  /* line 1108, style.scss */
   #RLHead {
     padding-top: 15px;
     padding-bottom: 15px; }
-    /* line 1061, style.scss */
+    /* line 1111, style.scss */
     #RLHead #Contacts a {
       font-size: 11px; }
-    /* line 1064, style.scss */
+    /* line 1114, style.scss */
     #RLHead #Strap {
       font-size: 24px; }
 
-  /* line 1068, style.scss */
+  /* line 1118, style.scss */
   #RLNav {
     font-size: 12px; }
-    /* line 1070, style.scss */
+    /* line 1120, style.scss */
     #RLNav .container {
       padding-left: 0;
       padding-right: 0;
@@ -1332,15 +1434,15 @@ div.directory {
       -o-border-radius: 0;
       border-radius: 0;
       behavior: url(PIE.htc); }
-    /* line 1076, style.scss */
+    /* line 1126, style.scss */
     #RLNav li {
       width: 100%;
       display: block !important;
       padding: 0px; }
-    /* line 1081, style.scss */
+    /* line 1131, style.scss */
     #RLNav ul#NavBar > li:hover > ul {
       top: 0px; }
-    /* line 1082, style.scss */
+    /* line 1132, style.scss */
     #RLNav ul#NavBar > li > ul {
       top: 0px;
       position: relative;
@@ -1348,99 +1450,99 @@ div.directory {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
       display: block-inline; }
-      /* line 1088, style.scss */
+      /* line 1138, style.scss */
       #RLNav ul#NavBar > li > ul li {
         text-align: center;
         width: 100%;
         padding: 0; }
-    /* line 1094, style.scss */
+    /* line 1144, style.scss */
     #RLNav .column {
       padding: 0; } }
 @media print {
-  /* line 1105, style.scss */
+  /* line 1155, style.scss */
   .RLKeyContacts .image {
     width: 10%;
     float: left;
     margin-right: 10px; }
-  /* line 1106, style.scss */
+  /* line 1156, style.scss */
   .RLKeyContacts .name, .RLKeyContacts .position {
     display: inline-block; }
 
-  /* line 1109, style.scss */
+  /* line 1159, style.scss */
   .RLIndex:not(:first-child) .image {
     display: none; }
 
-  /* line 1111, style.scss */
+  /* line 1161, style.scss */
   .info {
     display: inline-block; }
 
-  /* line 1114, style.scss */
+  /* line 1164, style.scss */
   .title a:after, .tags a:after, .info a:after, .image a:after, .paginate a:after, .contact a:after, #RLFoot a:after {
     content: none; }
 
-  /* line 1118, style.scss */
+  /* line 1168, style.scss */
   .directory {
     margin-bottom: 5px; }
-    /* line 1119, style.scss */
+    /* line 1169, style.scss */
     .directory div {
       display: inline-block; }
-    /* line 1122, style.scss */
+    /* line 1172, style.scss */
     .directory a:after {
       content: none; }
 
-  /* line 1126, style.scss */
+  /* line 1176, style.scss */
   body, .lead {
     font-size: 12px; }
 
-  /* line 1128, style.scss */
+  /* line 1178, style.scss */
   body {
     margin: 0;
     padding: 0;
     color: #000; }
 
-  /* line 1133, style.scss */
+  /* line 1183, style.scss */
   #RLFoot a, #RLPostContent, .tags {
     border: none; }
 
-  /* line 1139, style.scss */
+  /* line 1189, style.scss */
   #RLHead,
   .RLMoreContent,
   #RLFoot ul,
   #RLNav,
   #RLSide {
     display: none; } }
-/* line 1148, style.scss */
+/* line 1198, style.scss */
 .RLTeam {
   margin-bottom: 15px; }
-  /* line 1149, style.scss */
+  /* line 1199, style.scss */
   .RLTeam .title {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-size: 18px;
     border-bottom: solid #33b1e1 1px; }
-  /* line 1155, style.scss */
+  /* line 1205, style.scss */
   .RLTeam p {
     margin-bottom: 10px !important; }
 
-/* line 1161, style.scss */
+/* line 1211, style.scss */
 .RLPageHeader {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 15px; }
 
-/* line 1169, style.scss */
+/* line 1219, style.scss */
 #RLFAQContainer {
   padding-left: 0;
   padding-right: 0; }
 
-/* line 1172, style.scss */
+/* line 1222, style.scss */
 .RLFAQ > div > label:before {
   padding-right: 10px;
   font-family: FontAwesome;
   content: "\f059";
   font-size: 22px;
   float: left; }
-/* line 1179, style.scss */
+/* line 1229, style.scss */
 .RLFAQ > div > article p:first-child:before {
   padding-right: 10px;
   font-family: FontAwesome;
@@ -1454,7 +1556,7 @@ div.directory {
   top: 0.3em;
   left: -10px; }
 
-/* line 1191, style.scss */
+/* line 1241, style.scss */
 .RLFAQ label {
   padding: 10px 20px 10px 20px;
   position: relative;
@@ -1466,16 +1568,16 @@ div.directory {
   background: #31bbf0;
   font-weight: 400; }
 
-/* line 1202, style.scss */
+/* line 1252, style.scss */
 .RLFAQ label:hover {
   background: #009dd9; }
 
-/* line 1206, style.scss */
+/* line 1256, style.scss */
 .RLFAQ input:checked + label,
 .RLFAQ input:checked + label:hover {
   background: #009dd9; }
 
-/* line 1210, style.scss */
+/* line 1260, style.scss */
 .RLFAQ label:hover:after,
 .RLFAQ input:checked + label:hover:after {
   content: '';
@@ -1485,11 +1587,11 @@ div.directory {
   right: 13px;
   top: 7px; }
 
-/* line 1218, style.scss */
+/* line 1268, style.scss */
 .RLFAQ input {
   display: none; }
 
-/* line 1221, style.scss */
+/* line 1271, style.scss */
 .RLFAQ article {
   background: rgba(255, 255, 255, 0.5);
   margin-top: -1px;
@@ -1503,26 +1605,26 @@ div.directory {
   -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
   transition: height 0.3s ease-in-out, box-shadow 0.6s linear; }
 
-/* line 1231, style.scss */
+/* line 1281, style.scss */
 .RLFAQ article p {
   line-height: 2em;
   padding: 20px; }
 
-/* line 1235, style.scss */
+/* line 1285, style.scss */
 .RLFAQ input:checked ~ article {
   -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   transition: height 0.5s ease-in-out, box-shadow 0.1s linear; }
 
-/* line 1238, style.scss */
+/* line 1288, style.scss */
 .RLFAQ input:checked ~ article.ac-small {
   height: 140px; }
 
-/* line 1241, style.scss */
+/* line 1291, style.scss */
 .RLFAQ input:checked ~ article.ac-medium {
   height: 180px; }
 
-/* line 1244, style.scss */
+/* line 1294, style.scss */
 .RLFAQ input:checked ~ article.ac-large {
   height: 230px; }

@@ -10,6 +10,7 @@ $RLNavBarHover    : $RLBlue3;
 $RLNavBarSub      : $RLBlue3;
 $RLNavBarSubHover : $RLBlue2;
 $RLNavBarSubSelected : $RLBlue1;
+$OffWhite : #ecf0f1;
 
 $RLBotBorder : $RLBlue2 1px solid;
 
@@ -24,29 +25,9 @@ $TransitionVid: opacity 0.3s ease-in-out;
 @import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Lato:300,700');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
-@mixin auto-numbers($numbered-element, $sep, $counter: item, $nested-parent: false ){
-    $sel: ();
-    @if $nested-parent {
-        $sel: append($sel, unquote($nested-parent));
-
-        #{$nested-parent}{
-            list-style: none;
-            margin-left: 0;
-        }
-    }
-    $sel: append($sel, unquote('&'), comma);
-
-    #{$sel}{
-        counter-reset: #{$counter};
-        > #{$numbered-element}{
-            &:before{
-                counter-increment: #{$counter};
-                content: if($nested-parent, counters(#{$counter}, "#{$sep} ") "#{$sep} ", counter(#{$counter}) "#{$sep} ") ;
-            }
-        }
-    }
+.RLKeyContacts{
+a{	white-space: nowrap;}
 }
-
 .paginate {
 	font-size: 11px;
 	padding-right: 0;
@@ -76,7 +57,6 @@ a {
 	&.tel:before { content: "\f095"; }
 	&.lync:before { content: "\f0c0";}
 }
-
 legend {
 	border-bottom: $RLBotBorder;
 }
@@ -116,6 +96,7 @@ body {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 	font-family: $FontBody;
+	background: $RLBlue1;
 }
 
 #RLHead {
@@ -126,12 +107,12 @@ body {
 	background: $RLBlue1;
 	color: #fff;
 	position: relative;
-	.logo { margin-bottom: 40px; }
+	.logo { margin-bottom: 40px; img{width: 100%; max-width: 500px}}
 	#Contacts a {
 		white-space: nowrap;
 		font-size: 18px;
 		color: #fff;
-		@include opacity(0.5);
+		@include opacity(0.8);
 		text-decoration: none;
 		padding-left: 15px;
 		@include transition($Transition);
@@ -161,8 +142,9 @@ body {
 	position: relative;
 	margin-left: 0;margin-right: 0;
 	font-size: 16px;
-	background-color: $RLNavBar;
-	color:#fff;
+	background-color: #fff;
+	border-bottom: $RLNavBar 1px solid;
+	color:$RLNavBar;
 	font-family: $FontTitle;
 	z-index: 1 !important;
 	.selected { background-color: $RLNavBarSelected; }
@@ -197,13 +179,14 @@ body {
 				padding-left: 5;
 			}
 			&:hover {
-				background-color:$RLNavBarHover;
+				> a {color: #fff;}
+				background-color:$RLBlue1;
 				@include transition($Transition);
 			}
 		}
 		> li:hover > ul {
 			@include opacity(1);
-			top: 40px;
+			top: 43px;
 		}
 		li {
     		position: relative;
@@ -214,12 +197,14 @@ body {
 				padding-top: 10px;
 				padding-bottom: 10px;
 	    		display: block;
-				color:#fff;
+				color:$RLBlue1;
 	    		text-decoration: none;
 			    padding-right: 5px;
 			    padding-left: 5px;
 			}
 			ul {
+				border: $RLBlue2 1px solid;
+				border-top: none;
 				display: block;
 				z-index: 100;
 				padding-left: 0;
@@ -227,7 +212,7 @@ body {
 			    left: 0;
 			    top: -99999px;
 			    @include opacity(1);
-				background: $RLNavBarSub;
+				background: #fff;
 				@include border-radius(0 0 5px 5px);
    				behavior: url(PIE.htc);
 				@include transition($TransitionNav);
@@ -244,23 +229,28 @@ body {
 			    &:last-child{
 					@include border-radius(0 0 5px 5px);
 				}
-				&:hover { background-color:$RLNavBarSubHover; }
-				&:hover:last-child{
-					background-color:$RLNavBarSubHover;
-				}
+			&:hover {
+				> a {color: #fff;}
+				background-color:$RLBlue1;
+				@include transition($Transition);
+			}
 				&.selected {background-color: $RLNavBarSubSelected;}
 			}
 			ul li:last-child a { border: none; }
+			ul li ul {
+				border-top: $RLBlue2 1px solid;
+				@include border-radius(0 5px 5px 5px);}
 		}
 	}
 }
 
 
 #RLMain {
+	background: #fff;
 	margin-left: 0;
 	margin-right: 0;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	position: relative;
 	z-index: 0 !important;
 }
@@ -275,7 +265,7 @@ body {
 	font-weight: 600;
 	margin-left: 0;
 	margin-right: 0;
-	background: $RLBlue2;
+	background: $RLBlue1;
 	color: #fff;
 	padding-top: 20px;
 	font-size: 11px;
@@ -294,7 +284,7 @@ body {
 		margin-top: 25px;
 		margin-bottom: 10px;
 		font-size: 10px;
-		@include opacity(0.75);
+		@include opacity(0.85);
 		a {
 			color:#fff;
 			font-weight: 700;
@@ -307,7 +297,7 @@ body {
 	    margin-right: auto;
 	    list-style-type: none;
 		li {
-			font-weight: 300;
+			font-weight: 400;
 			text-align: left;
 			padding-top: 5px;
 		    white-space: nowrap;
@@ -345,6 +335,7 @@ body {
 }
 
 .BlueBoxCont {
+
 	margin-bottom: 30px;
     position: relative;
     width: 100%;
@@ -377,11 +368,21 @@ body {
 	color: #fff;
 	height: 200px;
 }
+.front {
+	.BlueBoxContent{
+
+    	border: 1px solid $RLBlue1;
+			background-color: #fff;
+			@include border-radius(20px);
+			font-weight: 700;
+			color: $RLBlue1;}
+}
+
 
 .BlueBox {
 	font-size: 26px;
 	display: table;
-	background-color: $RLBlue2;
+	background-color: $RLBlue1;
 	@include border-radius(20px);
     behavior: url(PIE.htc);
 	@include transition(all 0.5s);
@@ -393,6 +394,40 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
+
+
+
+    &.software { background: url(/media/software.jpg) no-repeat;}
+    &.it { background: url(/media/it.jpg) no-repeat;}
+    &.mobile { background: url(/media/mobile.jpg) no-repeat;}
+    &.other { background: url(/media/other.jpg) no-repeat;}
+
+
+    &.it, &.software, &.other, &.mobile, &.support-index { 
+    	background-size: 100%;
+
+		.BlueBoxContent {
+			background-color: #fff;
+			@include border-radius(20px);
+			font-weight: 700;
+			color: #333;
+		}
+		&.software, &.it, &.mobile, &.other {
+			.BlueBoxContent{
+				background-color: rgba(255,255,255,0.7);
+			}
+		}
+	}
+	&.support-index  {
+
+		.BlueBoxContent {
+			color: $RLBlue1;
+		}
+	}
+
+
+
+
 	&.front i {
 		font-size: 60px;
 		margin-bottom: 8px;
@@ -406,10 +441,7 @@ body {
 		.BlueBoxContent {
 	    vertical-align: top;}
 	    z-index: 1;
-	    -webkit-transform: rotateY(-180deg);
-	    -ms-transform: rotateY(-180deg);
-	    -moz-transform: rotateY(-180deg);  
-	    transform: rotateY(-180deg); 
+	    @include transform(rotateY(-180deg));
 	    font-size: 14px;
 	}
 }
@@ -430,7 +462,6 @@ body {
 	margin-right: 40px;
 	text-align: left;
 }
-
 
 .HomeProjects.News,
 .HomeProjects.Soon {
@@ -477,8 +508,6 @@ body {
 	}
 }
 
-.News p:before { content: "\f058"; }
-.Soon p:before { content: "\f192"; }
 
 .SideChunk {
 	padding-bottom: 30px;
@@ -486,7 +515,7 @@ body {
 	padding-right: 0;
  	position: relative; 
  	&:last-child{ padding-bottom: 0; }
-	a:hover > .title { background: $RLBlue1 ;}
+	a:hover > .title { background: $RLBlue2 ;}
 	p {
 		padding-left: 5px;
 		padding-right: 5px;
@@ -498,7 +527,7 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 		font-size: 18px; 
-		background-color: $RLBlue2;
+		background-color: $RLBlue1;
 		@include transition($Transition);
 		font-family: $FontTitle;
 		padding-top: 5px;
@@ -576,9 +605,15 @@ body {
 	padding-left: 0;
 	padding-right: 0;
 	line-height: 1.8em;
+	&.project{
+		border-bottom: none;
+		margin-bottom: 0;
+	}
 	p { margin-bottom: 20px; }
 	.img {
-		width: 100%;
+		width: 50%;
+		float: right;
+		margin-left: 15px;
 		margin-bottom: 15px;
 	}
 	.tags { margin-bottom: 15px;
@@ -667,10 +702,15 @@ body {
 	.img { width: 100%; }
 	.excerpt{margin-top: 5px;}
 }
+.project-icons{margin-top: 15px;}
 
 
-
-#CategoryChunk {
+.CategoryChunk {
+&.News p:before { content: "\f058"; }
+&.Soon p:before { content: "\f192"; }
+&.Videos p:before { content: "\f008"; }
+&.HowTos p:before { content: "\f05a"; }
+&.FAQ p:before { content: "\f05a"; }
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 	padding-left: 0;
@@ -784,10 +824,10 @@ div.directory{
 	overflow: hidden;
 	width: 727px;
 	img { width:727px; }
-	a:hover > .description { background: $RLBlue1; }
+	a:hover > .description { background: $RLBlue2; }
 	.description {
 		width: 33%;
-		background-color: $RLBlue2;
+		background-color: $RLBlue1;
 		Position: absolute;
 		right:0;
 		top:0;
@@ -861,7 +901,7 @@ div.directory{
         
 
 
-
+.twitter-follow-button {margin-top: 30px;}
 
 
 
@@ -982,6 +1022,12 @@ div.directory{
 	}
 }
 
+@media ( max-width: 1200px ){
+
+  #RLHead .logo {
+    margin-bottom: 80px; }
+
+}
 
 
 
@@ -989,6 +1035,10 @@ div.directory{
 
 
 @media (max-width: 768px) {
+
+  #RLHead .logo {
+    margin-bottom: 40px; }
+
 	div.container-fluid #RLNav { display: none; }
 	.MenuIcon { display: inline-block; }
 	
@@ -1054,7 +1104,7 @@ div.directory{
 			font-size: 8px;
 		}
 	}
-   	div.logo img { width:100%; }
+   	div.logo img { width: 100%; }
    	#RLHead { 
 	   	padding-top: 15px;
 		padding-bottom: 15px;
