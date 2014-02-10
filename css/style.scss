@@ -312,7 +312,7 @@ body {
 	}
 }
 
-#RLSearchInput {
+#RLSearchInput, .RLSearchInput {
     background: url(/media/search-white.png) no-repeat 10px 8px $RLBlue2;
     border: 0 none;
     font: bold 12px;
@@ -358,7 +358,7 @@ body {
 
 	&:hover .back {
 	    z-index: 2;   
-	    @include transform(rotateX(0deg));
+	    @include transform(rotateY(0deg));
 	}
 }
 
@@ -1017,6 +1017,11 @@ div.directory{
 #RLBodySearch{
 	padding-left: 0;padding-right: 0;
 	margin-bottom: 10px;
+	.RLSearchInput{background-color: #fff;
+	    background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc;
+		&::-webkit-input-placeholder{
+		    color: #bbb;
+		}}
 	input{
 		border: solid 1px $RLBlue2;
 	}
