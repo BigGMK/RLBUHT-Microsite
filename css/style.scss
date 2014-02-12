@@ -600,8 +600,8 @@ body {
 }
 .RLPost.info { padding: 0; margin-bottom: 15px;}
 #RLPostContent {
-	&.guide li{ margin-bottom: 15px; > ol {margin-top: 15px;list-style-type: lower-alpha;}
-}
+		&.guide li{ margin-bottom: 15px; > ol {margin-top: 15px;list-style-type: lower-alpha;}
+	}
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: 15px;
@@ -619,6 +619,9 @@ body {
 		float: right;
 		margin-left: 15px;
 		margin-bottom: 15px;
+	}
+	.RLTeam {
+		.img {width: 100%;}
 	}
 	.tags { margin-bottom: 15px;
 		a {
