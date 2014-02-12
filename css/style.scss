@@ -485,6 +485,9 @@ body {
 		padding-top: 8px;
 		margin-bottom: 8px;
 		font-family: $FontTitle;
+		a {
+			display: block;
+		}
 	}
 	.title {
 		border-bottom: $RLBotBorder;

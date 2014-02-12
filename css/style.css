@@ -624,7 +624,11 @@ body {
     padding-top: 8px;
     margin-bottom: 8px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 489, style.scss */
+    /* line 488, style.scss */
+    .HomeProjects.News .foot a,
+    .HomeProjects.Soon .foot a {
+      display: block; }
+  /* line 492, style.scss */
   .HomeProjects.News .title,
   .HomeProjects.Soon .title {
     border-bottom: #33b1e1 1px solid;
@@ -635,13 +639,13 @@ body {
     margin-bottom: 10px;
     padding-bottom: 5px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 499, style.scss */
+  /* line 502, style.scss */
   .HomeProjects.News p,
   .HomeProjects.Soon p {
     padding-left: 35px;
     padding-right: 15px;
     padding-bottom: 10px; }
-    /* line 503, style.scss */
+    /* line 506, style.scss */
     .HomeProjects.News p:before,
     .HomeProjects.Soon p:before {
       font-family: FontAwesome;
@@ -649,24 +653,24 @@ body {
       left: 15px;
       color: #33b1e1; }
 
-/* line 513, style.scss */
+/* line 516, style.scss */
 .SideChunk {
   padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
   position: relative; }
-  /* line 518, style.scss */
+  /* line 521, style.scss */
   .SideChunk:last-child {
     padding-bottom: 0; }
-  /* line 519, style.scss */
+  /* line 522, style.scss */
   .SideChunk a:hover > .title {
     background: #33b1e1; }
-  /* line 520, style.scss */
+  /* line 523, style.scss */
   .SideChunk p {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px; }
-  /* line 525, style.scss */
+  /* line 528, style.scss */
   .SideChunk .title {
     width: 100%;
     color: #fff;
@@ -682,81 +686,81 @@ body {
     font-family: "Ubuntu", sans-serif;
     padding-top: 5px;
     padding-bottom: 5px; }
-  /* line 537, style.scss */
+  /* line 540, style.scss */
   .SideChunk .img {
     width: 100%;
     margin-bottom: 5px; }
 
-/* line 543, style.scss */
+/* line 546, style.scss */
 .RLIndex {
   border-bottom: 1px solid #009dd9;
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0; }
-  /* line 544, style.scss */
+  /* line 547, style.scss */
   .RLIndex.first {
     padding-top: 0px;
     margin-top: 0px; }
-    /* line 545, style.scss */
+    /* line 548, style.scss */
     .RLIndex.first .title {
       font-size: 38px;
       border-bottom: #33b1e1 1px solid; }
-    /* line 549, style.scss */
+    /* line 552, style.scss */
     .RLIndex.first .info {
       margin-bottom: 11px; }
-  /* line 560, style.scss */
+  /* line 563, style.scss */
   .RLIndex.first .title {
     padding-left: 0;
     padding-right: 0; }
-  /* line 564, style.scss */
+  /* line 567, style.scss */
   .RLIndex.first .info {
     padding: 0; }
-  /* line 565, style.scss */
+  /* line 568, style.scss */
   .RLIndex:first-child {
     padding-left: 0;
     padding-right: 0; }
-  /* line 570, style.scss */
+  /* line 573, style.scss */
   .RLIndex:not(:first-child) .info {
     font-size: 10px; }
-  /* line 571, style.scss */
+  /* line 574, style.scss */
   .RLIndex:not(:first-child) .content {
     font-size: 12px; }
-  /* line 573, style.scss */
+  /* line 576, style.scss */
   .RLIndex .img {
     width: 100%; }
-  /* line 576, style.scss */
+  /* line 579, style.scss */
   .RLIndex .image {
     padding-left: 0;
     padding-right: 0; }
-  /* line 577, style.scss */
+  /* line 580, style.scss */
   .RLIndex .title {
     font-size: 24px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 500; }
-  /* line 582, style.scss */
+  /* line 585, style.scss */
   .RLIndex .info {
     margin-bottom: 10px; }
 
-/* line 588, style.scss */
+/* line 591, style.scss */
 #RLPostName {
   font-family: "Ubuntu", sans-serif;
   font-size: 38px;
   font-weight: 500;
   border-bottom: #33b1e1 1px solid; }
-  /* line 593, style.scss */
+  /* line 596, style.scss */
   #RLPostName.title {
     padding: 0; }
-    /* line 595, style.scss */
+    /* line 598, style.scss */
     #RLPostName.title.aboutus {
       margin-bottom: 15px; }
 
-/* line 598, style.scss */
+/* line 601, style.scss */
 .RLPost.info {
   padding: 0;
   margin-bottom: 15px; }
 
-/* line 599, style.scss */
+/* line 602, style.scss */
 #RLPostContent {
   padding-left: 0;
   padding-right: 0;
@@ -765,44 +769,44 @@ body {
   padding-left: 0;
   padding-right: 0;
   line-height: 1.8em; }
-  /* line 600, style.scss */
+  /* line 603, style.scss */
   #RLPostContent.guide li {
     margin-bottom: 15px; }
-    /* line 600, style.scss */
+    /* line 603, style.scss */
     #RLPostContent.guide li > ol {
       margin-top: 15px;
       list-style-type: lower-alpha; }
-  /* line 609, style.scss */
+  /* line 612, style.scss */
   #RLPostContent.project {
     border-bottom: none;
     margin-bottom: 0; }
-  /* line 613, style.scss */
+  /* line 616, style.scss */
   #RLPostContent p {
     margin-bottom: 20px; }
-  /* line 614, style.scss */
+  /* line 617, style.scss */
   #RLPostContent .img {
     width: 50%;
     float: right;
     margin-left: 15px;
     margin-bottom: 15px; }
-  /* line 620, style.scss */
+  /* line 623, style.scss */
   #RLPostContent .tags {
     margin-bottom: 15px; }
-    /* line 621, style.scss */
+    /* line 624, style.scss */
     #RLPostContent .tags a {
       line-height: 1em;
       font-size: 12px;
       margin-right: 5px; }
 
-/* line 630, style.scss */
+/* line 633, style.scss */
 .RLMoreContent a:hover > .title {
   background: #009dd9; }
-/* line 631, style.scss */
+/* line 634, style.scss */
 .RLMoreContent p {
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 5px; }
-/* line 636, style.scss */
+/* line 639, style.scss */
 .RLMoreContent .title {
   width: 100%;
   color: #fff;
@@ -818,18 +822,18 @@ body {
   font-family: "Ubuntu", sans-serif;
   padding-top: 5px;
   padding-bottom: 5px; }
-/* line 648, style.scss */
+/* line 651, style.scss */
 .RLMoreContent .img {
   width: 100%; }
 
-/* line 653, style.scss */
+/* line 656, style.scss */
 .RLKeyContacts {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: #33b1e1 1px solid; }
-  /* line 659, style.scss */
+  /* line 662, style.scss */
   .RLKeyContacts .name, .RLKeyContacts .position {
     color: #fff;
     font-size: 18px;
@@ -842,37 +846,37 @@ body {
     font-family: "Ubuntu", sans-serif;
     padding-top: 5px;
     padding-bottom: 5px; }
-    /* line 667, style.scss */
+    /* line 670, style.scss */
     .RLKeyContacts .name a, .RLKeyContacts .position a {
       font-size: 14px;
       color: #fff; }
-  /* line 672, style.scss */
+  /* line 675, style.scss */
   .RLKeyContacts .name {
     font-weight: 700; }
-  /* line 673, style.scss */
+  /* line 676, style.scss */
   .RLKeyContacts .image {
     padding-left: 0;
     padding-right: 0; }
-  /* line 677, style.scss */
+  /* line 680, style.scss */
   .RLKeyContacts .img {
     width: 100%; }
-  /* line 678, style.scss */
+  /* line 681, style.scss */
   .RLKeyContacts .bio {
     margin-top: 5px; }
-  /* line 679, style.scss */
+  /* line 682, style.scss */
   .RLKeyContacts .contact {
     margin-top: 5px; }
-    /* line 681, style.scss */
+    /* line 684, style.scss */
     .RLKeyContacts .contact a:not(:first-child) {
       margin-left: 25px; }
 
-/* line 687, style.scss */
+/* line 690, style.scss */
 #RLProjects, #RLHowToContainer {
   border-bottom: #33b1e1 1px solid; }
-  /* line 689, style.scss */
+  /* line 692, style.scss */
   #RLProjects > div, #RLHowToContainer > div {
     margin-bottom: 30px; }
-  /* line 691, style.scss */
+  /* line 694, style.scss */
   #RLProjects .name, #RLHowToContainer .name {
     color: #fff;
     font-size: 18px;
@@ -886,47 +890,47 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: 700; }
-    /* line 700, style.scss */
+    /* line 703, style.scss */
     #RLProjects .name a, #RLHowToContainer .name a {
       color: #fff;
       display: block; }
-  /* line 702, style.scss */
+  /* line 705, style.scss */
   #RLProjects .logo, #RLHowToContainer .logo {
     padding: 0; }
-  /* line 703, style.scss */
+  /* line 706, style.scss */
   #RLProjects .img, #RLHowToContainer .img {
     width: 100%; }
-  /* line 704, style.scss */
+  /* line 707, style.scss */
   #RLProjects .excerpt, #RLHowToContainer .excerpt {
     margin-top: 5px; }
 
-/* line 706, style.scss */
+/* line 709, style.scss */
 .project-icons {
   margin-top: 15px; }
 
-/* line 709, style.scss */
+/* line 712, style.scss */
 .CategoryChunk {
   margin-bottom: 15px;
   padding-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
   position: relative; }
-  /* line 710, style.scss */
+  /* line 713, style.scss */
   .CategoryChunk.News p:before {
     content: "\f058"; }
-  /* line 711, style.scss */
+  /* line 714, style.scss */
   .CategoryChunk.Soon p:before {
     content: "\f192"; }
-  /* line 712, style.scss */
+  /* line 715, style.scss */
   .CategoryChunk.Videos p:before {
     content: "\f008"; }
-  /* line 713, style.scss */
+  /* line 716, style.scss */
   .CategoryChunk.HowTos p:before {
     content: "\f05a"; }
-  /* line 714, style.scss */
+  /* line 717, style.scss */
   .CategoryChunk.FAQ p:before {
     content: "\f05a"; }
-  /* line 720, style.scss */
+  /* line 723, style.scss */
   .CategoryChunk .title {
     padding-left: 0;
     padding-right: 0;
@@ -934,79 +938,79 @@ body {
     font-size: 38px;
     font-weight: 300;
     border-bottom: #33b1e1 1px solid; }
-  /* line 728, style.scss */
+  /* line 731, style.scss */
   .CategoryChunk .info {
     padding: 0; }
-  /* line 729, style.scss */
+  /* line 732, style.scss */
   .CategoryChunk .body {
     margin-top: 15px; }
-    /* line 731, style.scss */
+    /* line 734, style.scss */
     .CategoryChunk .body p {
       padding-left: 35px;
       padding-right: 15px;
       padding-bottom: 10px; }
-      /* line 735, style.scss */
+      /* line 738, style.scss */
       .CategoryChunk .body p:before {
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
         color: #33b1e1; }
-    /* line 742, style.scss */
+    /* line 745, style.scss */
     .CategoryChunk .body p:last-child {
       padding-bottom: 0;
       margin-bottom: 0; }
 
-/* line 750, style.scss */
+/* line 753, style.scss */
 #RLSide #CategoryChunk {
   border-bottom: #33b1e1 1px solid; }
 
-/* line 755, style.scss */
+/* line 758, style.scss */
 div.directory {
   font-size: 12px;
   padding-left: 0;
   padding-right: 0;
   line-height: 2.4em;
   background-color: #eef8fa; }
-  /* line 761, style.scss */
+  /* line 764, style.scss */
   div.directory.title {
     background-color: #31bbf0;
     color: #fff;
     font-weight: 700; }
-  /* line 766, style.scss */
+  /* line 769, style.scss */
   div.directory.entry:nth-of-type(2n) {
     background-color: #d8eff5; }
-  /* line 767, style.scss */
+  /* line 770, style.scss */
   div.directory:last-of-type {
     margin-bottom: 15px; }
-  /* line 768, style.scss */
+  /* line 771, style.scss */
   div.directory.entry:hover {
     background-color: #fff; }
 
-/* line 772, style.scss */
+/* line 775, style.scss */
 #RLTitleBar {
   border-bottom: #33b1e1 1px solid;
   padding-bottom: 0px;
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0; }
-  /* line 773, style.scss */
+  /* line 776, style.scss */
   #RLTitleBar h2 {
     margin-top: 0;
     margin-bottom: 0; }
-  /* line 785, style.scss */
+  /* line 788, style.scss */
   #RLTitleBar .title {
     padding-left: 0;
     font-family: "Ubuntu", sans-serif;
     font-size: 38px;
     font-weight: 500; }
-  /* line 791, style.scss */
+  /* line 794, style.scss */
   #RLTitleBar #RLBodySearch {
     margin-top: 10px; }
-  /* line 792, style.scss */
+  /* line 795, style.scss */
   #RLTitleBar.videos {
     margin-bottom: 0px; }
 
-/* line 802, style.scss */
+/* line 805, style.scss */
 .slider {
   border: #33b1e1 1px solid;
   margin-bottom: 30px;
@@ -1015,7 +1019,7 @@ div.directory {
   height: 408px;
   overflow: hidden; }
 
-/* line 811, style.scss */
+/* line 814, style.scss */
 .slides {
   padding-left: 0px;
   height: 100%;
@@ -1027,7 +1031,7 @@ div.directory {
   -o-transition: all 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 1000ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-/* line 820, style.scss */
+/* line 823, style.scss */
 .slide {
   height: 100%;
   float: left;
@@ -1035,13 +1039,13 @@ div.directory {
   position: relative;
   overflow: hidden;
   width: 727px; }
-  /* line 827, style.scss */
+  /* line 830, style.scss */
   .slide img {
     width: 727px; }
-  /* line 828, style.scss */
+  /* line 831, style.scss */
   .slide a:hover > .description {
     background: #33b1e1; }
-  /* line 829, style.scss */
+  /* line 832, style.scss */
   .slide .description {
     width: 33%;
     background-color: #009dd9;
@@ -1058,18 +1062,18 @@ div.directory {
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     z-index: 50; }
-    /* line 841, style.scss */
+    /* line 844, style.scss */
     .slide .description .title {
       font-size: 30px;
       font-family: "Ubuntu", sans-serif;
       border-bottom: 1px solid #fff;
       margin-bottom: 10px;
       padding-bottom: 5px; }
-    /* line 848, style.scss */
+    /* line 851, style.scss */
     .slide .description p {
       margin-left: 10px; }
 
-/* line 852, style.scss */
+/* line 855, style.scss */
 .slider-arrow {
   position: absolute;
   display: block;
@@ -1084,29 +1088,29 @@ div.directory {
   behavior: url(PIE.htc);
   color: #fff;
   text-decoration: none; }
-  /* line 862, style.scss */
+  /* line 865, style.scss */
   .slider-arrow:hover {
     background: #fff;
     color: #ccc; }
 
-/* line 868, style.scss */
+/* line 871, style.scss */
 .slider-arrow--right {
   bottom: 50%;
   right: 90px; }
 
-/* line 869, style.scss */
+/* line 872, style.scss */
 .slider-arrow--left {
   bottom: 50%;
   left: 90px; }
 
-/* line 871, style.scss */
+/* line 874, style.scss */
 .slider-nav {
   position: absolute;
   bottom: 20px;
   right: 25px;
   z-index: 60; }
 
-/* line 876, style.scss */
+/* line 879, style.scss */
 .slider-nav__item {
   background: #fff;
   width: 16px;
@@ -1121,15 +1125,15 @@ div.directory {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px; }
-  /* line 886, style.scss */
+  /* line 889, style.scss */
   .slider-nav__item:hover {
     background: #33b1e1; }
 
-/* line 888, style.scss */
+/* line 891, style.scss */
 .slider-nav__item--current {
   background: #009dd9; }
 
-/* line 890, style.scss */
+/* line 893, style.scss */
 .MenuIcon {
   color: #009dd9;
   display: none;
@@ -1138,18 +1142,18 @@ div.directory {
   margin-left: 10px;
   border: 0;
   font-size: 0.6em; }
-  /* line 891, style.scss */
+  /* line 894, style.scss */
   .MenuIcon .fa-stack {
     margin-top: -0.8em; }
-  /* line 899, style.scss */
+  /* line 902, style.scss */
   .MenuIcon:hover {
     color: #31bbf0; }
 
-/* line 905, style.scss */
+/* line 908, style.scss */
 .twitter-follow-button {
   margin-top: 30px; }
 
-/* line 920, style.scss */
+/* line 923, style.scss */
 #pageslide {
   display: none;
   position: absolute;
@@ -1165,24 +1169,24 @@ div.directory {
   background: #33b1e1;
   color: #fff;
   font-family: "Ubuntu", sans-serif; }
-  /* line 933, style.scss */
+  /* line 936, style.scss */
   #pageslide a {
     color: #fff; }
-  /* line 937, style.scss */
+  /* line 940, style.scss */
   #pageslide .selected {
     background-color: #009dd9; }
-  /* line 938, style.scss */
+  /* line 941, style.scss */
   #pageslide ul#NavBar {
     padding: 0; }
-    /* line 940, style.scss */
+    /* line 943, style.scss */
     #pageslide ul#NavBar > li {
       cursor: pointer;
       white-space: nowrap; }
-      /* line 943, style.scss */
+      /* line 946, style.scss */
       #pageslide ul#NavBar > li > a {
         text-align: center;
         padding-left: 0.75em; }
-      /* line 947, style.scss */
+      /* line 950, style.scss */
       #pageslide ul#NavBar > li:hover {
         background-color: #31bbf0;
         -webkit-transition: all 0.4s ease;
@@ -1190,85 +1194,85 @@ div.directory {
         -moz-transition: all 0.4s ease 0s;
         -o-transition: all 0.4s ease 0s;
         transition: all 0.4s ease 0s; }
-    /* line 953, style.scss */
+    /* line 956, style.scss */
     #pageslide ul#NavBar li.selected ul {
       display: block; }
-    /* line 956, style.scss */
+    /* line 959, style.scss */
     #pageslide ul#NavBar li ul {
       display: none;
       padding: 0;
       background: #31bbf0; }
-    /* line 961, style.scss */
+    /* line 964, style.scss */
     #pageslide ul#NavBar li ul li {
       cursor: pointer;
       padding-left: 1.5em;
       white-space: nowrap; }
-      /* line 964, style.scss */
+      /* line 967, style.scss */
       #pageslide ul#NavBar li ul li ul {
         margin-left: -1.5em; }
-        /* line 966, style.scss */
+        /* line 969, style.scss */
         #pageslide ul#NavBar li ul li ul li {
           cursor: pointer;
           padding-left: 2.25em;
           margin-top: 0.75em; }
-      /* line 973, style.scss */
+      /* line 976, style.scss */
       #pageslide ul#NavBar li ul li:hover {
         background-color: #33b1e1; }
-      /* line 974, style.scss */
+      /* line 977, style.scss */
       #pageslide ul#NavBar li ul li.selected {
         background-color: #009dd9; }
 
-/* line 983, style.scss */
+/* line 986, style.scss */
 .RLVideo {
   margin-bottom: 30px; }
-  /* line 984, style.scss */
+  /* line 987, style.scss */
   .RLVideo h4 {
     border-bottom: #33b1e1 1px solid;
     padding-bottom: 5px;
     font-family: "Ubuntu", sans-serif; }
-  /* line 990, style.scss */
+  /* line 993, style.scss */
   .RLVideo img {
     width: 100%; }
 
-/* line 995, style.scss */
+/* line 998, style.scss */
 .mfp-fade {
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
 
-/* line 996, style.scss */
+/* line 999, style.scss */
 .mfp-fade.mfp-bg {
   opacity: 0; }
 
-/* line 997, style.scss */
+/* line 1000, style.scss */
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8; }
 
-/* line 998, style.scss */
+/* line 1001, style.scss */
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0; }
 
-/* line 999, style.scss */
+/* line 1002, style.scss */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0; }
 
-/* line 1000, style.scss */
+/* line 1003, style.scss */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
   opacity: 1; }
 
-/* line 1001, style.scss */
+/* line 1004, style.scss */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0; }
 
-/* line 1003, style.scss */
+/* line 1006, style.scss */
 #RLFeedback {
   margin: 0 auto;
   float: none; }
-  /* line 1006, style.scss */
+  /* line 1009, style.scss */
   #RLFeedback .control-label, #RLFeedback .controls {
     margin-bottom: 15px; }
-  /* line 1007, style.scss */
+  /* line 1010, style.scss */
   #RLFeedback button#submit {
     background-color: #31bbf0;
     color: #fff;
@@ -1283,163 +1287,163 @@ div.directory {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
-    /* line 1011, style.scss */
+    /* line 1014, style.scss */
     #RLFeedback button#submit:hover {
       background: #009dd9; }
-  /* line 1014, style.scss */
+  /* line 1017, style.scss */
   #RLFeedback textarea {
     height: 10em; }
 
-/* line 1018, style.scss */
+/* line 1021, style.scss */
 #RLBodySearch {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 10px; }
-  /* line 1021, style.scss */
+  /* line 1024, style.scss */
   #RLBodySearch .RLSearchInput {
     background-color: #fff;
     background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc; }
-    /* line 1023, style.scss */
+    /* line 1026, style.scss */
     #RLBodySearch .RLSearchInput::-webkit-input-placeholder {
       color: #bbb; }
-  /* line 1026, style.scss */
+  /* line 1029, style.scss */
   #RLBodySearch input {
     border: solid 1px #33b1e1; }
 
 @media (max-width: 1200px) {
-  /* line 1033, style.scss */
+  /* line 1036, style.scss */
   #RLHead .logo {
     margin-bottom: 80px; } }
 @media (max-width: 768px) {
-  /* line 1045, style.scss */
+  /* line 1048, style.scss */
   #RLHead .logo {
     margin-bottom: 40px; }
 
-  /* line 1048, style.scss */
+  /* line 1051, style.scss */
   div.container-fluid #RLNav {
     display: none; }
 
-  /* line 1049, style.scss */
+  /* line 1052, style.scss */
   .MenuIcon {
     display: inline-block; }
 
-  /* line 1051, style.scss */
+  /* line 1054, style.scss */
   #RLNav {
     display: none; }
 
-  /* line 1052, style.scss */
+  /* line 1055, style.scss */
   #pageslide {
     width: 200px; }
-    /* line 1053, style.scss */
+    /* line 1056, style.scss */
     #pageslide ul#NavBar li {
       display: block; }
 
-  /* line 1054, style.scss */
+  /* line 1057, style.scss */
   .slider {
     height: 200px; }
-    /* line 1055, style.scss */
+    /* line 1058, style.scss */
     .slider .slide .description {
       width: 100%;
       font-size: 12px; }
-      /* line 1058, style.scss */
+      /* line 1061, style.scss */
       .slider .slide .description .title {
         font-size: 20px; }
 
-  /* line 1059, style.scss */
+  /* line 1062, style.scss */
   #RLHead div:not(:first-child) {
     text-align: center; }
 
-  /* line 1060, style.scss */
+  /* line 1063, style.scss */
   #search {
     display: none; }
 
-  /* line 1061, style.scss */
+  /* line 1064, style.scss */
   #Contacts {
     margin-bottom: 15px; }
 
-  /* line 1062, style.scss */
+  /* line 1065, style.scss */
   #RLHead .logo {
     margin-bottom: 15px;
     text-align: center; }
-    /* line 1065, style.scss */
+    /* line 1068, style.scss */
     #RLHead .logo img {
       width: 100%;
       max-width: 500px; }
 
-  /* line 1068, style.scss */
+  /* line 1071, style.scss */
   #RLBody {
     border-right: 0; }
 
-  /* line 1069, style.scss */
+  /* line 1072, style.scss */
   .SideChunk {
     margin-bottom: 15px;
     padding-bottom: 0; }
-    /* line 1072, style.scss */
+    /* line 1075, style.scss */
     .SideChunk .image {
       display: none; }
-    /* line 1073, style.scss */
+    /* line 1076, style.scss */
     .SideChunk p {
       display: inline;
       padding: 0; }
 
-  /* line 1078, style.scss */
+  /* line 1081, style.scss */
   .News, .Soon {
     margin-bottom: 30px; } }
 @media (max-width: 480px) {
-  /* line 1088, style.scss */
+  /* line 1091, style.scss */
   .RLMoreContent {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 30px; }
 
-  /* line 1093, style.scss */
+  /* line 1096, style.scss */
   .SideChunk {
     margin-bottom: 30px; }
-    /* line 1095, style.scss */
+    /* line 1098, style.scss */
     .SideChunk .SideChunkBody {
       padding-left: 10px;
       padding-right: 10px; }
 
-  /* line 1100, style.scss */
+  /* line 1103, style.scss */
   .SideChunk:last-child {
     margin-bottom: 0; }
 
-  /* line 1101, style.scss */
+  /* line 1104, style.scss */
   .slider {
     height: 200px; }
 
-  /* line 1102, style.scss */
+  /* line 1105, style.scss */
   .slide .description {
     width: 100%;
     font-size: 12px; }
-    /* line 1105, style.scss */
+    /* line 1108, style.scss */
     .slide .description .title {
       font-size: 20px; }
 
-  /* line 1108, style.scss */
+  /* line 1111, style.scss */
   #RLFoot #copy {
     margin: 0px;
     font-size: 8px; }
 
-  /* line 1113, style.scss */
+  /* line 1116, style.scss */
   div.logo img {
     width: 100%; }
 
-  /* line 1114, style.scss */
+  /* line 1117, style.scss */
   #RLHead {
     padding-top: 15px;
     padding-bottom: 15px; }
-    /* line 1117, style.scss */
+    /* line 1120, style.scss */
     #RLHead #Contacts a {
       font-size: 11px; }
-    /* line 1120, style.scss */
+    /* line 1123, style.scss */
     #RLHead #Strap {
       font-size: 24px; }
 
-  /* line 1124, style.scss */
+  /* line 1127, style.scss */
   #RLNav {
     font-size: 12px; }
-    /* line 1126, style.scss */
+    /* line 1129, style.scss */
     #RLNav .container {
       padding-left: 0;
       padding-right: 0;
@@ -1449,15 +1453,15 @@ div.directory {
       -o-border-radius: 0;
       border-radius: 0;
       behavior: url(PIE.htc); }
-    /* line 1132, style.scss */
+    /* line 1135, style.scss */
     #RLNav li {
       width: 100%;
       display: block !important;
       padding: 0px; }
-    /* line 1137, style.scss */
+    /* line 1140, style.scss */
     #RLNav ul#NavBar > li:hover > ul {
       top: 0px; }
-    /* line 1138, style.scss */
+    /* line 1141, style.scss */
     #RLNav ul#NavBar > li > ul {
       top: 0px;
       position: relative;
@@ -1465,99 +1469,99 @@ div.directory {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
       display: block-inline; }
-      /* line 1144, style.scss */
+      /* line 1147, style.scss */
       #RLNav ul#NavBar > li > ul li {
         text-align: center;
         width: 100%;
         padding: 0; }
-    /* line 1150, style.scss */
+    /* line 1153, style.scss */
     #RLNav .column {
       padding: 0; } }
 @media print {
-  /* line 1161, style.scss */
+  /* line 1164, style.scss */
   .RLKeyContacts .image {
     width: 10%;
     float: left;
     margin-right: 10px; }
-  /* line 1162, style.scss */
+  /* line 1165, style.scss */
   .RLKeyContacts .name, .RLKeyContacts .position {
     display: inline-block; }
 
-  /* line 1165, style.scss */
+  /* line 1168, style.scss */
   .RLIndex:not(:first-child) .image {
     display: none; }
 
-  /* line 1167, style.scss */
+  /* line 1170, style.scss */
   .info {
     display: inline-block; }
 
-  /* line 1170, style.scss */
+  /* line 1173, style.scss */
   .title a:after, .tags a:after, .info a:after, .image a:after, .paginate a:after, .contact a:after, #RLFoot a:after {
     content: none; }
 
-  /* line 1174, style.scss */
+  /* line 1177, style.scss */
   .directory {
     margin-bottom: 5px; }
-    /* line 1175, style.scss */
+    /* line 1178, style.scss */
     .directory div {
       display: inline-block; }
-    /* line 1178, style.scss */
+    /* line 1181, style.scss */
     .directory a:after {
       content: none; }
 
-  /* line 1182, style.scss */
+  /* line 1185, style.scss */
   body, .lead {
     font-size: 12px; }
 
-  /* line 1184, style.scss */
+  /* line 1187, style.scss */
   body {
     margin: 0;
     padding: 0;
     color: #000; }
 
-  /* line 1189, style.scss */
+  /* line 1192, style.scss */
   #RLFoot a, #RLPostContent, .tags {
     border: none; }
 
-  /* line 1195, style.scss */
+  /* line 1198, style.scss */
   #RLHead,
   .RLMoreContent,
   #RLFoot ul,
   #RLNav,
   #RLSide {
     display: none; } }
-/* line 1204, style.scss */
+/* line 1207, style.scss */
 .RLTeam {
   margin-bottom: 15px; }
-  /* line 1205, style.scss */
+  /* line 1208, style.scss */
   .RLTeam .title {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-size: 18px;
     border-bottom: solid #33b1e1 1px; }
-  /* line 1211, style.scss */
+  /* line 1214, style.scss */
   .RLTeam p {
     margin-bottom: 10px !important; }
 
-/* line 1217, style.scss */
+/* line 1220, style.scss */
 .RLPageHeader {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 15px; }
 
-/* line 1225, style.scss */
+/* line 1228, style.scss */
 #RLFAQContainer {
   padding-left: 0;
   padding-right: 0; }
 
-/* line 1228, style.scss */
+/* line 1231, style.scss */
 .RLFAQ > div > label:before {
   padding-right: 10px;
   font-family: FontAwesome;
   content: "\f059";
   font-size: 22px;
   float: left; }
-/* line 1235, style.scss */
+/* line 1238, style.scss */
 .RLFAQ > div > article p:first-child:before {
   padding-right: 10px;
   font-family: FontAwesome;
@@ -1571,7 +1575,7 @@ div.directory {
   top: 0.3em;
   left: -10px; }
 
-/* line 1247, style.scss */
+/* line 1250, style.scss */
 .RLFAQ label {
   padding: 10px 20px 10px 20px;
   position: relative;
@@ -1583,16 +1587,16 @@ div.directory {
   background: #31bbf0;
   font-weight: 400; }
 
-/* line 1258, style.scss */
+/* line 1261, style.scss */
 .RLFAQ label:hover {
   background: #009dd9; }
 
-/* line 1262, style.scss */
+/* line 1265, style.scss */
 .RLFAQ input:checked + label,
 .RLFAQ input:checked + label:hover {
   background: #009dd9; }
 
-/* line 1266, style.scss */
+/* line 1269, style.scss */
 .RLFAQ label:hover:after,
 .RLFAQ input:checked + label:hover:after {
   content: '';
@@ -1602,11 +1606,11 @@ div.directory {
   right: 13px;
   top: 7px; }
 
-/* line 1274, style.scss */
+/* line 1277, style.scss */
 .RLFAQ input {
   display: none; }
 
-/* line 1277, style.scss */
+/* line 1280, style.scss */
 .RLFAQ article {
   background: rgba(255, 255, 255, 0.5);
   margin-top: -1px;
@@ -1620,26 +1624,26 @@ div.directory {
   -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
   transition: height 0.3s ease-in-out, box-shadow 0.6s linear; }
 
-/* line 1287, style.scss */
+/* line 1290, style.scss */
 .RLFAQ article p {
   line-height: 2em;
   padding: 20px; }
 
-/* line 1291, style.scss */
+/* line 1294, style.scss */
 .RLFAQ input:checked ~ article {
   -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
   transition: height 0.5s ease-in-out, box-shadow 0.1s linear; }
 
-/* line 1294, style.scss */
+/* line 1297, style.scss */
 .RLFAQ input:checked ~ article.ac-small {
   height: 140px; }
 
-/* line 1297, style.scss */
+/* line 1300, style.scss */
 .RLFAQ input:checked ~ article.ac-medium {
   height: 180px; }
 
-/* line 1300, style.scss */
+/* line 1303, style.scss */
 .RLFAQ input:checked ~ article.ac-large {
   height: 230px; }
