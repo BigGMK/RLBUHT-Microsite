@@ -1,1 +1,0 @@
-$("input#RLSearchInput").focus(function(){$(this).attr("placeholder","To Search, type and press enter")}).blur(function(){$(this).attr("placeholder","Search")});$(".ShowNavBar").pageslide();$(document).ready(function(){$("#NavBar li").click(function(){$("#NavBar ul").slideUp();$("#NavBar li ul").next().is(":visible")||$(this).find("ul").slideToggle()})});

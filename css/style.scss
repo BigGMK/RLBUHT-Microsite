@@ -24,6 +24,7 @@ $TransitionVid: opacity 0.3s ease-in-out;
 @import "compass/css3/pie";
 @import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Lato:300,700');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css');
 
 .RLKeyContacts{
 a{	white-space: nowrap;}
@@ -39,7 +40,10 @@ a{	white-space: nowrap;}
 }
 
 html, html a { -webkit-font-smoothing: antialiased; }
+
 img.skype_pnh_logo_img { display: none !important; }
+span[class^='skype_pnh_container'] {display:none !important;}
+span[class^='skype_pnh_print_container'] {display:inline !important;}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { font-family: $FontTitle; }
@@ -80,7 +84,7 @@ legend {
 	    @include transition($Transition);
 		&:hover {background: $RLBlue1;}
 		@include border-radius(3px);
-    behavior: url(PIE.htc);
+  	  	behavior: url(/js/PIE/PIE.htc);
 	}
 	&:before {
 		font-family: FontAwesome;
@@ -214,7 +218,7 @@ body {
 			    @include opacity(1);
 				background: #fff;
 				@include border-radius(0 0 5px 5px);
-   				behavior: url(PIE.htc);
+   				behavior: url(/js/PIE/PIE.htc);
 				@include transition($TransitionNav);
 				li:hover ul { overflow: auto;top: 0; left: 100%;}
 			}
@@ -320,7 +324,7 @@ body {
     width: 170px;
     padding: 6px 15px 6px 35px;
 	@include border-radius(20px);
-    behavior: url(PIE.htc);
+    behavior: url(/js/PIE/PIE.htc);
     @include transition($Transition);
 	&::-webkit-input-placeholder{ color: #eee; }
 	&:focus {
@@ -384,7 +388,7 @@ body {
 	display: table;
 	background-color: $RLBlue1;
 	@include border-radius(20px);
-    behavior: url(PIE.htc);
+    behavior: url(/js/PIE/PIE.htc);
 	@include transition(all 0.5s);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -468,7 +472,7 @@ body {
 .HomeProjects.Soon {
 	position: relative;
 	@include border-radius(20px);
-    behavior: url(PIE.htc);
+    behavior: url(/js/PIE/PIE.htc);
 	border: $RLBotBorder;
 	p >a {
 		color:#333;
@@ -862,7 +866,7 @@ div.directory{
 	margin-bottom: -50px;
 	border: 1px solid #fff;
 	@include border-radius(8px);
-    behavior: url(PIE.htc);
+    behavior: url(/js/PIE/PIE.htc);
 	color: #fff;
 	text-decoration: none;
 	&:hover {
@@ -1133,7 +1137,7 @@ div.directory{
 			padding-left: 0;
 			padding-right: 0;
 			@include border-radius(0);
-   			behavior: url(PIE.htc);
+   			behavior: url(/js/PIE/PIE.htc);
 		}
 		li {
 	   		width: 100%;
