@@ -322,6 +322,9 @@ div.directory.entry:hover { background-color: #fff; }
   .SideChunk .image { display: none; }
   .SideChunk p { display: inline; padding: 0; }
   .News, .Soon { margin-bottom: 30px; } }
+@media (max-width: 992px) { #RLNav { font-size: 12px; }
+  #RLNav ul#NavBar > li:hover > ul { top: 38px; }
+  #RLBody { border-right: none; } }
 @media (max-width: 480px) { .RLMoreContent { padding-left: 0; padding-right: 0; margin-bottom: 30px; }
   .SideChunk { margin-bottom: 30px; }
   .SideChunk .SideChunkBody { padding-left: 10px; padding-right: 10px; }

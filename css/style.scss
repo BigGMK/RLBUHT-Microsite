@@ -1092,6 +1092,14 @@ div.directory{
 
 
 
+@media (max-width: 992px) {
+#RLNav{font-size: 12px;
+		ul#NavBar > li:hover > ul {
+    		top: 38px;
+		}}
+#RLBody{border-right: none;}
+}
+
 
 @media (max-width: 480px) {
 
