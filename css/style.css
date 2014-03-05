@@ -96,7 +96,7 @@ body { padding-left: 0 !important; padding-right: 0 !important; font-family: "Op
 
 #RLSearchInput, .RLSearchInput { background: url(/media/search-white.png) no-repeat 10px 8px #33b1e1; border: 0 none; font: bold 12px; color: #fff; width: 170px; padding: 6px 15px 6px 35px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; behavior: url(/js/PIE/PIE.htc); -webkit-transition: all 0.4s ease; -webkit-transition-delay: 0s; -moz-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s; }
 #RLSearchInput::-webkit-input-placeholder, .RLSearchInput::-webkit-input-placeholder { color: #eee; }
-#RLSearchInput:focus, .RLSearchInput:focus { background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc; color: #6a6f75; width: 320px; outline: none; }
+#RLSearchInput:focus, .RLSearchInput:focus { background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc; color: #6a6f75; width: 200px; outline: none; }
 #RLSearchInput:focus::-webkit-input-placeholder, .RLSearchInput:focus::-webkit-input-placeholder { color: #bbb; }
 
 .BlueBoxCont { margin-bottom: 30px; position: relative; width: 100%; height: 200px; position: relative; cursor: pointer; }
@@ -378,13 +378,14 @@ div.directory.entry:hover { background-color: #fff; }
 .RLFAQ input { display: none; }
 
 .RLFAQ article { background: rgba(255, 255, 255, 0.5); margin-top: -1px; overflow: hidden; height: 0px; position: relative; z-index: 10; background: #eef8fa; -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear; -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear; -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear; transition: height 0.3s ease-in-out, box-shadow 0.6s linear; }
+.RLFAQ article p.tags { padding-top: 0; padding-bottom: 0; }
 
-.RLFAQ article p { line-height: 2em; padding: 20px; }
+.RLFAQ article p { line-height: 2em; padding: 10px 20px 10px 20px; }
 
 .RLFAQ input:checked ~ article { -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear; -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear; -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear; transition: height 0.5s ease-in-out, box-shadow 0.1s linear; }
 
-.RLFAQ input:checked ~ article.ac-small { height: 140px; }
+.RLFAQ input:checked ~ article.ac-small { height: 150px; }
 
-.RLFAQ input:checked ~ article.ac-medium { height: 180px; }
+.RLFAQ input:checked ~ article.ac-medium { height: 200px; }
 
-.RLFAQ input:checked ~ article.ac-large { height: 230px; }
+.RLFAQ input:checked ~ article.ac-large { height: 250px; }

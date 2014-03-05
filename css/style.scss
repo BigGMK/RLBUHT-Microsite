@@ -333,7 +333,7 @@ body {
 		}
 	    background: url(/media/search-dark.png) no-repeat 10px 8px #fcfcfc;
 	    color: #6a6f75;
-	    width: 320px;
+	    width: 200px;
 	    outline: none;
     }
 }
@@ -1301,20 +1301,21 @@ div.directory{
 	z-index: 10;
 	background: $RLBlue5;
 	@include transition(height 0.3s ease-in-out, box-shadow 0.6s linear);
+	p.tags{padding-top: 0;padding-bottom: 0}
 }
 .RLFAQ article p{
 	line-height: 2em;
-	padding: 20px;
+	padding: 10px 20px 10px 20px;
 }
 .RLFAQ input:checked ~ article{
 	@include transition(height 0.5s ease-in-out, box-shadow 0.1s linear);
 }
 .RLFAQ input:checked ~ article.ac-small{
-	height: 140px;
+	height: 150px;
 }
 .RLFAQ input:checked ~ article.ac-medium{
-	height: 180px;
+	height: 200px;
 }
 .RLFAQ input:checked ~ article.ac-large{
-	height: 230px;
+	height: 250px;
 }
